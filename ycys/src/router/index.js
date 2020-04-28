@@ -1,6 +1,6 @@
 
 
-export default [
+export default router [
     {
         path:'/login',
         component:'Login'
@@ -17,71 +17,55 @@ export default [
         path:'/',
         component:'Minsu',
         childrens:[
+           
             {
-                path:'/',
-                component:'Home'
+                path:'/super_theme.html',
+                component:'Super_theme'
             },
             {
-                path:'/superhotel_home.html',
-                component:'Superhotel_home'
+                path:'/select_location',
+                component:'Select_location'
             },
             {
-                path:'/server.html',
-                component:'Server'
+                path:'/search',
+                component:'Search'
             },
             {
-                path:'/person.html',
-                component:'Person',
-                isAuthorization:true
+                path:'/getCoupon.html',
+                component:'GetCoupon'
             },
-        //     {
-        //         path:'/super_theme.html',
-        //         component:'Super_theme'
-        //     },
-        //     {
-        //         path:'/select_location',
-        //         component:'Select_location'
-        //     },
-        //     {
-        //         path:'/search',
-        //         component:'Search'
-        //     },
-        //     {
-        //         path:'/getCoupon.html',
-        //         component:'GetCoupon'
-        //     },
-        //     {
-        //         path:'/stock_list.html',
-        //         component:'Stock_list'
-        //     },
-        //     {
-        //         path:'/super_list.html',
-        //         component:'Super_list'
-        //     },
-        //     {
-        //         path:'/cutprice.html',
-        //         component:'Cutprice'
-        //     },
-        //     {
-        //         path:'/theme.html',
-        //         component:'Theme'
-        //     },
-        //     {
-        //         path:'/lowprice.html',
-        //         component:'Lowprice'
-        //     },
-        //     {
-        //         path:'/super_detail.html',
-        //         component:'Super_detail'
-        //     },
-        //     {
-        //         path:'/mno_list.html',
-        //         component:'Mno_list.html'
-        //     },
-        //     {
-        //         path:'Mno_detail.html',
-        //         component:'Theme'
-        //     },
+            {
+                path:'/stock_list.html',
+                component:'Stock_list'
+            },
+            {
+                path:'/super_list.html',
+                component:'Super_list'
+            },
+            {
+                path:'/cutprice.html',
+                component:'Cutprice'
+            },
+            {
+                path:'/theme.html',
+                component:'Theme'
+            },
+            {
+                path:'/lowprice.html',
+                component:'Lowprice'
+            },
+            {
+                path:'/super_detail.html',
+                component:'Super_detail'
+            },
+            {
+                path:'/mno_list.html',
+                component:'Mno_list.html'
+            },
+            {
+                path:'Mno_detail.html',
+                component:'Theme'
+            },
         //     {
         //         path:'/superhotel_day.html',
         //         component:'Superhotel_day'
@@ -162,4 +146,23 @@ export default [
         //     },
         ]
     }
+]
+export default  Nav = [
+    {
+        path:'/',
+        component:'Home'
+    },
+    {
+        path:'/superhotel_home.html',
+        component:'Superhotel_home'
+    },
+    {
+        path:'/server.html',
+        component:'Server'
+    },
+    {
+        path:'/person.html',
+        component:'Person',
+        isAuthorization:true
+    },
 ]
