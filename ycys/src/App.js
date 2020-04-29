@@ -1,7 +1,10 @@
 import React from 'react';
 import './App.css';
 import Myrouter from './components/Myrouter'
-import {router} from './router/index'
+import router from './router/index'
+
+
+
 
 function App() {
   return (

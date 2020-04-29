@@ -14,7 +14,7 @@ class Myrouter extends Component {
         return (
            <Switch>
                {
-                   this.props.router.map(v=>(
+                   this.props.router.map(v=>( 
                        <Route key={v.path} exact={v.exact} path={v.path}  ></Route>
                    ))
                }
@@ -23,7 +23,7 @@ class Myrouter extends Component {
         );
     }
     componentWillMount(){
-        console.log(this.props);
+        console.log(this.props.router);
         
     }
 }
