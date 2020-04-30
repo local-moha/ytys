@@ -1,7 +1,7 @@
-组长：付杰
+﻿组长：付杰
 组员：万为明、成梦婷、胡静
 项目：wechat.yitianyishu.com/minsu/index.html
-UI库：material-ui.com/zh/
+UI库：https://zarm.gitee.io/#/components/quick-start
 使用框架：react
 git：https://github.com/local-moha/ytys
 ***************************************************************************
