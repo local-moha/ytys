@@ -1,6 +1,23 @@
 import React, { Component } from 'react'
 import style from '../assets/css/home.module.css'
+import axios from 'axios'
 export default class Home extends Component {
+    async componentDidMount() {
+        axios.interceptors.request.use(config => {
+            console.log(config);
+            // config.headers.authority = "api.yitianyishu.com"
+            return config
+        })
+        // axios.interceptors.response.use(data => {
+        //     console.log(data);
+        //     return data
+        // })
+        const { data } = await axios.get("/meisu/site/carousel?_=" + Date.now())
+        console.log(data);
+        // const { data } = await axios.get("/meisu/banner/theme?_=1588344428998")
+        // console.log(data);
+
+    }
     render() {
         return (
             <div>
@@ -180,28 +197,6 @@ export default class Home extends Component {
             </div>
         )
     }
-    // <div className={style.page}>
-    //     <div className="appdownload-bar">
-    //         <div className="appdownload-avatar"></div>
-    //         <div className="appdownload-word"></div>
-    //         <div className="appdownload-close"></div>
-    //         <div className="appdownload-btn"></div>
-    //     </div>
-    //     <div className="header-top">
-    //         <div className="swiper-w"></div>
-    //         <div className="search-box"></div>
-    //         <div className="couponItem"></div>
-    //         <div className="entry-w"></div>
-    //         <div className="recommend-item"></div>
-    //     </div>
-    //     <div className="lowprice"></div>
-    //     <div className="content">
-    //         <div className="item"></div>
-    //         <div className="item" id="desc"></div>
-    //     </div>
 
-    // </div>
-    componentDidMount() {
 
-    }
 }

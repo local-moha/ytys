@@ -1,0 +1,13 @@
+﻿组长：付杰
+组员：万为明、成梦婷、胡静
+项目：wechat.yitianyishu.com/minsu/index.html
+UI库：https://zarm.gitee.io/#/components/quick-start
+使用框架：react
+git：https://github.com/local-moha/ytys
+****************************5.1***********************************************
+万为明：
+    完成首页面布局+样式
+    调用数据时 404 跨域没问题 估计是网站限制了
+    官网：{"code":"0","message":"success","timestamp":null,"sign":null,"nonce":null,"data":...}
+    调用：{"code":"3000","message":"error","timestamp":null,"sign":null,"nonce":null,"data":404}
+    
