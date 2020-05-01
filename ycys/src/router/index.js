@@ -17,7 +17,7 @@ import Login from '../view/Login'
     //     component:Index,
     //     childrens:[
     //         {
-    //             path:'/Home/',
+    //             path:'/',
     //             component:Home
     //         },
     //         {
