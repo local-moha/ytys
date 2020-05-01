@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+
 import {
     Route,
     Switch,
     Redirect
 } from 'react-router-dom'
-// import GuardRouter from './GuardRouter'
+import GuardRouter from './GuardRouter'
 class Myrouter extends Component {
     constructor(porps){
         super(porps);
