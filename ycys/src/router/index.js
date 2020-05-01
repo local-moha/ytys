@@ -1,8 +1,10 @@
 import Login from '../view/Login'
- export default [
+import Index from '../view/Index'
+import Home from '../view/Home'
+export default [
     {
-        path:'/login',
-        component:Login
+        path: '/login',
+        component: Login
     },
     // {
     //     path:'/distribution',
@@ -12,29 +14,30 @@ import Login from '../view/Login'
     //     path:'/error',
     //     component:Error
     // },
-    // {
-    //     path:'/',
-    //     component:Index,
-    //     childrens:[
-    //         {
-    //             path:'/Home/',
-    //             component:Home
-    //         },
-    //         {
-    //             path:'/superhotel_home.html',
-    //             component:Superhotel_home
-    //         },
-    //         {
-    //             path:'/superhotel_home.html',
-    //             component:Server
-    //         },
-    //         {
-    //             path:'/person.html',
-    //             component:Person,
-    //             isAuthorization:true
-    //         },
-    //     ]
-    // },
+    {
+        path: '/',
+        exact: true,
+        component: Index,
+        childrens: [
+            {
+                path: '/',
+                component: Home
+            },
+            // {
+            //     path:'/superhotel_home.html',
+            //     component:Superhotel_home
+            // },
+            // {
+            //     path:'/superhotel_home.html',
+            //     component:Server
+            // },
+            // {
+            //     path:'/person.html',
+            //     component:Person,
+            //     isAuthorization:true
+            // },
+        ]
+    },
     // {
     //     path:'/meisu',
     //     component:Meisu,
@@ -111,7 +114,7 @@ import Login from '../view/Login'
     //             path:'/meisu/super_detail.html',
     //             component:Super_detail
     //         },
-        
+
     //         {
     //             path:'/meisu/mno_list.html',
     //             component:Mno_list
@@ -124,7 +127,7 @@ import Login from '../view/Login'
     //             path:'/meisu/superhotel_day.html',
     //             component:Superhotel_day
     //         },
-            
+
     //         {
     //             path:'/meisu/superhotel_detail.html',
     //             component:Superhotel_detail
@@ -168,6 +171,6 @@ import Login from '../view/Login'
     //     ]
     // }
 ]
-   
-    
+
+
 

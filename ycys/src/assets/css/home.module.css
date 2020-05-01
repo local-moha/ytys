@@ -1,0 +1,113 @@
+.page{
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 98px;
+    height: auto;
+    
+}
+/******************************************************/
+.appdownload_bar{
+    height: 88px;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid #f1f0f0;
+}
+.appdownload_avatar{
+    float: left;
+    margin: 17px 20px 0;
+    width: 50px;
+    height: 50px;
+    background: url("https://wechat.yitianyishu.com/minsu/img/logo.46889da3.png") no-repeat 0 0/50px;
+    border-radius: 6px;
+}
+.appdownload_word{
+    float: left;
+    color: #252525;
+    font-size: 28px;
+    line-height: 88px;
+    width:438px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.appdownload_close{
+    margin-top: 11px;
+    float: right;
+    width: 66px;
+    height: 66px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjY4REYzNkFFMTdFMTFFNzhBRjlBNERGOERDM0U4NzciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjY4REYzNkJFMTdFMTFFNzhBRjlBNERGOERDM0U4NzciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2NkNCOTU3RkUxNzkxMUU3OEFGOUE0REY4REMzRTg3NyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2NkNCOTU4MEUxNzkxMUU3OEFGOUE0REY4REMzRTg3NyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PpMd4b0AAADMSURBVHjahJExCsJAEEUng+gZBK1sRBBsvIAW4hkE72Yl9hbBItrYBEFQC29gIYo30D8wxbLO7gReILt5P5v5xao8noioCWbgQf7VBSX4MG4NMAQVaDtiB+zBALREnoM76DsBIh5AD9zEYz3qxAmIRXn/ybqZCzBF2eAg3QoYp0TSYZERUGlAret/YvzlMGAZPH/BIhZTsvzjOhALsLFaYGeqo1wL7NRxydXIhniNhpOskQ1xagzHDBB554ipgK3IL+0zJ8YBZ/D+CTAAgSdJm73LVrAAAAAASUVORK5CYII=") no-repeat 50%/16px;
+}
+.appdownload_btn{
+    float: right;
+    width: 136px;
+    line-height: 56px;
+    text-align: center;
+    border-radius: 6px;
+    background-color: #ff5f5f;
+    font-size: 12px;
+    color: #fff;
+    margin-top: 16px;
+}
+/******************************************************/
+.header_top{
+    /* background: #fff; */
+    height: 1828px;
+    background: hotpink;
+    overflow: hidden;
+}
+.swiper_w{
+    background: cadetblue;
+    height: 650px;
+    position: relative;
+}
+.search_box{
+    width: 670px;
+    height: 420px;
+    background: #fff;
+    -webkit-box-shadow: 0 0 16px 0 rgba(0,0,0,.1);
+    box-shadow: 0 0 16px 0 rgba(0,0,0,.1);
+    border-radius: 8px;
+    padding: 32px;
+    margin: -110px auto 0;
+    position: relative;
+}
+.couponItem{
+    margin: 36px auto 0;
+    width: 670px;
+    height: 80px;
+    line-height:80px;
+    border-radius: 6px;
+    padding: 20px 80px;
+    color: #ff4f54;
+    font-size: 24px;
+    background: #ffefc3 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADLElEQVRoQ+1YzUobURg9n45bi6suXBbyDELpSp/AIhkppY9Q6C7WCIVgnsCW0oZiwAlF4hPo3mfoTuhezK7WzFfuZGZyZ+b+zM0VJGUCopDcyfnO+b7znSthyV+05PjRFPDUCjYKNAp4MtC0kCeB3scbBbwp9HzA/60AH7dbAPUB7ABYV5LFAEw/sep9Ss8wwOnf5c+BJmBcIg46dDL8pRNKq0AK/hrAhlZlL/AAMtDiC5SFJsXfguItOvmpLMJQQDgGsPt44AXTGePp73oFAKAL+hK9VmExFXC3UNtUmCy3iwReIBIq6tlPW40m9DV65lqAeHT1pWsbIwiZ/TqApblJn0vfRkqyTQpUC1CBF19gZTItIM7UsAx+RRUCfY+cC7gHsJZLkIGXAWdfpB3CEvN12kWjJA2cFXjzEpiKQX6utElb3yZsC8Qam5SLL5MjPxv0AOb3NBh9dpqBpCuOw1cArhBjrTJsRuuTWsVaqGVPgLo0iHrOeyA7wL1wCMbbem4hBjRtVRtwbTtlbScQ0A0mf1/Q+fl08QI+hdsgsRFtG1dqmVjasHW2dKKmBHx+pk8/RgemuGTNQtzb28TD6m99XKCZj4sP5CAMbpOZgNV2E7t9R6fR0K+Aj3ubCEwFCOyiCEfWtcpIQ4/HKOAo3AZwWVEgZ9Di7T57grhPp74tdCQNsWLBzPONbUZsy0tptzf44zHE3BU2Sldgnttobp+KJSW3hW3o8z1gtdwuRQvYKHfFIovHYJ4tsgIgjVXKA2qMF1LAs8ULYLbIRo6LjA/373PmCwNX6nmnaJEOfBarE1IMwy/ZD0WuWegw5OKFQ9MyZVu05iI5QhsMoOSd7gUchDxznhoJspa3O9itwvgXKGD/DjGvz4soSV0bdPnSYiFEvbUmFLleaDrhGDF2lQrUcZhCwqx5H9AGHrqgszPHK2Wn3cJ05RqMjcISs4EvDHW6ofOsY9gF+rxwiyDYoqH6PxPGLMQf2i2srPbBvAPG+izz1LwS2ja1fKHXtE2SAIKgowOf5FVTUFqG95oCnlqlRoFGAU8GmhbyJND7eKOAN4WeD2gU8CTQ+/g/dv1LXnXg09YAAAAASUVORK5CYII=") no-repeat 26px/48px 48px;
+}
+.entry_w{
+    width: 650px;
+    height: 140px;
+    background: darkgoldenrod;
+    margin: 48px 40px 64px;
+    overflow: hidden;
+}
+.recommend_item{
+    width: 650px;
+    height: 500px;
+    background: firebrick;
+    overflow: hidden;
+    margin: 40px;
+}
+/******************************************************/
+.lowprice{
+    width: 686px;
+    height: 214px;
+    margin: 40px auto;
+    background: url("https://wechat.yitianyishu.com/minsu/img/home_image_feature@2x.9824ed5f.png") no-repeat 0 0/9.14rem 2.85rem;
+}
+/******************************************************/
+.content{
+    height: 1606px;
+    background: blueviolet;
+    margin-top: 20px;
+}
