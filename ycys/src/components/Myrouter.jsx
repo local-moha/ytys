@@ -15,7 +15,7 @@ class Myrouter extends Component {
            <Switch>
                {
                    this.props.router.map(v=>( 
-                       <Route key={v.path} exact={v.exact} path={v.path}  ></Route>
+                       <Route key={v.path} exact={v.exact} path={v.path} render={()=><GuardRouter {...v}></GuardRouter>} ></Route>
                    ))
                }
                 <Redirect to={'/error'} from='*'></Redirect>
