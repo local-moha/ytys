@@ -3,15 +3,24 @@ import style from '../assets/css/home.module.css'
 import axios from 'axios'
 export default class Home extends Component {
     async componentDidMount() {
-        axios.interceptors.request.use(config => {
-            console.log(config);
-            // config.headers.authority = "api.yitianyishu.com"
-            return config
-        })
+        // axios.interceptors.request.use(config => {
+        //     console.log(config);
+        //     config.url = "/meisu" + config.url;
+        //     // config.headers.authority = "api.yitianyishu.com"
+        //     return config
+        // })
         // axios.interceptors.response.use(data => {
         //     console.log(data);
         //     return data
         // })
+
+        // const { data } = await axios.get("/meisu/wechat/jsapi", {
+        //     params: {
+        //         url: "https//wechat.yitianyishu.com/minsu/index.html",
+        //         _: Date.now()
+        //     }
+        // })
+        // console.log(data);
         const { data } = await axios.get("/meisu/site/carousel?_=" + Date.now())
         console.log(data);
         // const { data } = await axios.get("/meisu/banner/theme?_=1588344428998")

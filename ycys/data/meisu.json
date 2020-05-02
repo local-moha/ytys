@@ -1,0 +1,107 @@
+{
+    "carousel": {
+        "code": "0",
+        "message": "success",
+        "timestamp": null,
+        "sign": null,
+        "nonce": null,
+        "data": [
+            {
+                "url": "https://www.yitianyishu.com/homestay/m5bfd17dc8ec77",
+                "image_url": "https://img.yitianyishu.com/carousel/carousel/8afbf516fa0ef3bd862c78a8926c0ba4-1280_720.jpg",
+                "desc": "距离长颈鹿庄园5分钟，部分房间带无边泳池，睡进300亩竹海茶园中",
+                "text": "",
+                "image_url_list": {
+                    "big": "https://img.yitianyishu.com/carousel/carousel/8afbf516fa0ef3bd862c78a8926c0ba4-1000_660.jpg",
+                    "middle": "https://img.yitianyishu.com/carousel/carousel/8afbf516fa0ef3bd862c78a8926c0ba4-750_480.jpg",
+                    "small": "https://img.yitianyishu.com/carousel/carousel/8afbf516fa0ef3bd862c78a8926c0ba4-220_220.jpg",
+                    "alt": "距离长颈鹿庄园5分钟，部分房间带无边泳池，睡进300亩竹海茶园中"
+                }
+            },
+            {
+                "url": "https://wechat.yitianyishu.com/minsu/super_theme.html?banner_id=19",
+                "image_url": "https://img.yitianyishu.com/carousel/carousel/ac02b072f393f26e21e6d4fc8e8f588a-1280_720.jpg",
+                "desc": "",
+                "text": "",
+                "image_url_list": {
+                    "big": "https://img.yitianyishu.com/carousel/carousel/ac02b072f393f26e21e6d4fc8e8f588a-1000_660.jpg",
+                    "middle": "https://img.yitianyishu.com/carousel/carousel/ac02b072f393f26e21e6d4fc8e8f588a-750_480.jpg",
+                    "small": "https://img.yitianyishu.com/carousel/carousel/ac02b072f393f26e21e6d4fc8e8f588a-220_220.jpg",
+                    "alt": ""
+                }
+            },
+            {
+                "url": "https://www.yitianyishu.com/super/1527",
+                "image_url": "https://img.yitianyishu.com/carousel/carousel/1201a05e687cc99719762ddd1c23a623-1280_720.jpg",
+                "desc": "【周末不加价】千岛湖安麓限时特价1晚/2晚超值套餐",
+                "text": "千岛湖·安麓",
+                "image_url_list": {
+                    "big": "https://img.yitianyishu.com/carousel/carousel/1201a05e687cc99719762ddd1c23a623-1000_660.jpg",
+                    "middle": "https://img.yitianyishu.com/carousel/carousel/1201a05e687cc99719762ddd1c23a623-750_480.jpg",
+                    "small": "https://img.yitianyishu.com/carousel/carousel/1201a05e687cc99719762ddd1c23a623-220_220.jpg",
+                    "alt": "【周末不加价】千岛湖安麓限时特价1晚/2晚超值套餐"
+                }
+            },
+            {
+                "url": "https://www.yitianyishu.com/super/1349",
+                "image_url": "https://img.yitianyishu.com/carousel/carousel/d101f6a60249fae598b199343ecbdb51-1280_720.jpg",
+                "desc": "「五一、节假日可用」圣岛莫干温泉美墅丨含温泉、寿喜锅家庭套餐",
+                "text": "",
+                "image_url_list": {
+                    "big": "https://img.yitianyishu.com/carousel/carousel/d101f6a60249fae598b199343ecbdb51-1000_660.jpg",
+                    "middle": "https://img.yitianyishu.com/carousel/carousel/d101f6a60249fae598b199343ecbdb51-750_480.jpg",
+                    "small": "https://img.yitianyishu.com/carousel/carousel/d101f6a60249fae598b199343ecbdb51-220_220.jpg",
+                    "alt": "「五一、节假日可用」圣岛莫干温泉美墅丨含温泉、寿喜锅家庭套餐"
+                }
+            },
+            {
+                "url": "https://www.yitianyishu.com/super/1507",
+                "image_url": "https://img.yitianyishu.com/carousel/carousel/d77e24d2dbbdb152ac16aec761647dec-1280_720.jpg",
+                "desc": "【杭州临安5店美宿通用！限时599大促】全年可用，与皓皓星空，山海竹林共同入睡！",
+                "text": "临安5店通用",
+                "image_url_list": {
+                    "big": "https://img.yitianyishu.com/carousel/carousel/d77e24d2dbbdb152ac16aec761647dec-1000_660.jpg",
+                    "middle": "https://img.yitianyishu.com/carousel/carousel/d77e24d2dbbdb152ac16aec761647dec-750_480.jpg",
+                    "small": "https://img.yitianyishu.com/carousel/carousel/d77e24d2dbbdb152ac16aec761647dec-220_220.jpg",
+                    "alt": "【杭州临安5店美宿通用！限时599大促】全年可用，与皓皓星空，山海竹林共同入睡！"
+                }
+            },
+            {
+                "url": "https://www.yitianyishu.com/super/1137",
+                "image_url": "https://img.yitianyishu.com/carousel/carousel/f624f89021d2e40e146cbc0e5036018f-1280_720.jpg",
+                "desc": "低至5折，安吉+贵州2地3店通用，体验网红星空茅草屋",
+                "text": "安吉·仲夏dream",
+                "image_url_list": {
+                    "big": "https://img.yitianyishu.com/carousel/carousel/f624f89021d2e40e146cbc0e5036018f-1000_660.jpg",
+                    "middle": "https://img.yitianyishu.com/carousel/carousel/f624f89021d2e40e146cbc0e5036018f-750_480.jpg",
+                    "small": "https://img.yitianyishu.com/carousel/carousel/f624f89021d2e40e146cbc0e5036018f-220_220.jpg",
+                    "alt": "低至5折，安吉+贵州2地3店通用，体验网红星空茅草屋"
+                }
+            },
+            {
+                "url": "https://www.yitianyishu.com/homestay/m5bca8c5fe79f3",
+                "image_url": "https://img.yitianyishu.com/carousel/carousel/ef2d1f6d72267db51ddddc086bfb2b9e-1280_720.jpg",
+                "desc": "宁波余姚树蛙部落，江浙首家爆款亲子树屋民宿，现实中的童话世界",
+                "text": "宁波余姚·树蛙",
+                "image_url_list": {
+                    "big": "https://img.yitianyishu.com/carousel/carousel/ef2d1f6d72267db51ddddc086bfb2b9e-1000_660.jpg",
+                    "middle": "https://img.yitianyishu.com/carousel/carousel/ef2d1f6d72267db51ddddc086bfb2b9e-750_480.jpg",
+                    "small": "https://img.yitianyishu.com/carousel/carousel/ef2d1f6d72267db51ddddc086bfb2b9e-220_220.jpg",
+                    "alt": "宁波余姚树蛙部落，江浙首家爆款亲子树屋民宿，现实中的童话世界"
+                }
+            },
+            {
+                "url": "https://www.yitianyishu.com/super/1213",
+                "image_url": "https://img.yitianyishu.com/carousel/carousel/dc8a4b42268941f69fc0453569f0123e-1280_720.jpg",
+                "desc": "6地15店通用！限时499大促，有效期至12月30号！未预约全额退",
+                "text": "6地15店通用券",
+                "image_url_list": {
+                    "big": "https://img.yitianyishu.com/carousel/carousel/dc8a4b42268941f69fc0453569f0123e-1000_660.jpg",
+                    "middle": "https://img.yitianyishu.com/carousel/carousel/dc8a4b42268941f69fc0453569f0123e-750_480.jpg",
+                    "small": "https://img.yitianyishu.com/carousel/carousel/dc8a4b42268941f69fc0453569f0123e-220_220.jpg",
+                    "alt": "6地15店通用！限时499大促，有效期至12月30号！未预约全额退"
+                }
+            }
+        ]
+    }
+}

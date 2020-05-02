@@ -10,4 +10,6 @@ git：https://github.com/local-moha/ytys
     调用数据时 404 跨域没问题 估计是网站限制了
     官网：{"code":"0","message":"success","timestamp":null,"sign":null,"nonce":null,"data":...}
     调用：{"code":"3000","message":"error","timestamp":null,"sign":null,"nonce":null,"data":404}
-    
+****************************5.2***********************************************
+万为明：
+    排除数据bug。代理语法错误。。。    
