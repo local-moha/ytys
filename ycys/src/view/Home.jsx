@@ -1,25 +1,31 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import homeCreator from '../store/actionCreator/home'
 import style from '../assets/css/home.module.css'
 import MyNav from '../components/MyNav'
-export default class Home extends Component {
+import Swiper from '../components/Swiper'
+import { date } from '../filters/index'
 
-    async componentDidMount() {
-        const data = await this.$axios.get("/meisu/banner/theme?_=" + Date.now())
-        console.log(data);
-    }
+export class Home extends Component {
     render() {
+        // console.log(this.props.home);
+        const { themeList, superList, hotCityList, carouselList } = this.props.home;
+        // console.log(carouselList);
+        const destOne = [];
+        const destTwo = [];
         return (
             <div className={style.page}>
-                <div className={style.appdownload_bar}>
+                {/* <div className={style.appdownload_bar}>
                     <div className={style.appdownload_avatar}></div>
                     <div className={style.appdownload_word}>五一端午可用低至3折人均200+ </div>
                     <div className={style.appdownload_close}></div>
                     <div className={style.appdownload_btn}>立即抢购</div>
-                </div>
+                </div> */}
                 <div className={style.header_top}>
                     <div className={style.swiper_w}>
-                        轮播图
-                        </div>
+                        <Swiper carouselList={carouselList}></Swiper>
+
+                    </div>
                     {/* className={style.} */}
                     <div className={style.search_box}>
                         <div className={style.location_item}>
@@ -29,6 +35,7 @@ export default class Home extends Component {
                                 </div>
                         </div>
                         <div className={style.join_item}>
+
                             <div className={`${style.jitem_item} ${style.fl}`}>
                                 <div className={style.jitem_action}>入住</div>
                                 <div className={style.jitem_date}>5月1日</div>
@@ -60,30 +67,30 @@ export default class Home extends Component {
                     </div>
                     <div className={style.recommend_item}>
                         <div className={style.ovh} style={{ marginBottom: "16px" }}>
-                            <div className={`${style.large_box} ${style.fl} ${style.bgImg1}`} >
+                            <div className={`${style.large_box} ${style.fl}`} style={{ backgroundImage: `url(${themeList.length > 0 ? themeList[0].image.middle : ""})` }}>
                                 <div className={style.re_info}>
-                                    <div className={style.re_tit}>亲子度假</div>
-                                    <div className={style.re_intr}>熊孩子的天堂</div>
+                                    <div className={style.re_tit}>{themeList.length > 0 ? themeList[0].title : ""}</div>
+                                    <div className={style.re_intr}>{themeList.length > 0 ? themeList[0].subtitle : ""}</div>
                                 </div>
                             </div>
-                            <div className={`${style.small_box} ${style.fr} ${style.bgImg2}`}>
+                            <div className={`${style.small_box} ${style.fr}`} style={{ backgroundImage: `url(${themeList.length > 0 ? themeList[1].image.middle : ""})` }}>
                                 <div className={style.re_info}>
-                                    <div className={style.re_tit}>网红美宿</div>
-                                    <div className={style.re_intr}>抖音小红书种草</div>
+                                    <div className={style.re_tit}>{themeList.length > 0 ? themeList[1].title : ""}</div>
+                                    <div className={style.re_intr}>{themeList.length > 0 ? themeList[1].subtitle : ""}</div>
                                 </div>
                             </div>
                         </div>
                         <div className={style.ovh} >
-                            <div className={`${style.small_box} ${style.fl} ${style.bgImg3}`}>
+                            <div className={`${style.small_box} ${style.fl}`} style={{ backgroundImage: `url(${themeList.length > 0 ? themeList[2].image.middle : ""})` }}>
                                 <div className={style.re_info}>
-                                    <div className={style.re_tit}>泳池精选</div>
-                                    <div className={style.re_intr}>清凉一夏</div>
+                                    <div className={style.re_tit}>{themeList.length > 0 ? themeList[2].title : ""}</div>
+                                    <div className={style.re_intr}>{themeList.length > 0 ? themeList[2].subtitle : ""}</div>
                                 </div>
                             </div>
-                            <div className={`${style.large_box} ${style.fr} ${style.bgImg4}`}>
+                            <div className={`${style.large_box} ${style.fr}`} style={{ backgroundImage: `url(${themeList.length > 0 ? themeList[3].image.middle : ""})` }}>
                                 <div className={style.re_info}>
-                                    <div className={style.re_tit}>温泉精选</div>
-                                    <div className={style.re_intr}>温泉美宿陪你过冬</div>
+                                    <div className={style.re_tit}>{themeList.length > 0 ? themeList[3].title : ""}</div>
+                                    <div className={style.re_intr}>{themeList.length > 0 ? themeList[3].subtitle : ""}</div>
                                 </div>
                             </div>
                         </div>
@@ -105,35 +112,42 @@ export default class Home extends Component {
                             </div>
                             <div className={style.super_scroll}>
                                 <div className={style.super_list} style={{ width: "3450px" }}>
-                                    <div className={`${style.super_item} ${style.team_item}`}>
-                                        <div className={style.team_img_w}>
-                                            <div className={`${style.team_img} ${style.bg_img}`} style={{ backgroundImage: "url('https://img.yitianyishu.com/team/index/56fb1a8949dc301f93a0661d4e16dca7-750_480.jpg')" }}></div>
-                                            <div className={style.team_timebox}>
-                                                <div className={style.team_icon} style={{ background: "rgb(5,229,128)" }}></div>
-                                                    进行中 剩余4天0小时49分
+                                    {
+                                        superList ? superList.map(v => (
+                                            <div key={v.team_id} className={`${style.super_item} ${style.team_item}`}>
+                                                <div className={style.team_img_w}>
+                                                    <div className={`${style.team_img} ${style.bg_img}`} style={{ backgroundImage: `url(${v.image_url_list.middle})` }}></div>
+                                                    <div className={style.team_timebox}>
+                                                        <div className={style.team_icon} style={{ background: "rgb(5,229,128)" }}></div>
+                                                        进行中 剩余{date(v.end_time / 1 - v.start_time / 1)}
+                                                    </div>
                                                 </div>
-                                        </div>
-                                        <div className={style.team_info}>
-                                            <div className={style.team_name}>
-                                                江苏7店通用，限抢200套|南京、常州、溧阳、无锡四地通兑，度假之选一网打尽！2天1晚度假套餐【江南古韵/网红泡泡屋//轻奢美宿任选其一入住一晚+双早+民宿特色体验】周末暑期可用，有效期到年底！
+                                                {/* 怎么是透明的 */}
+                                                <div className={style.team_info}>
+                                                    <div className={style.team_name}>
+                                                        {v.title}
+                                                    </div>
+                                                    <div className={style.team_intr}>
+                                                        <div className={style.team_address}>
+                                                            {v.city_name + v.area_name}
+                                                        </div>
+                                                        <div className={style.team_type}>
+                                                            {v.type_name}
+                                                        </div>
+                                                        <div className={style.team_peoplenum}>
+                                                            适合{v.num}人
+                                                            </div>
+                                                    </div>
+                                                    <div className={style.team_price}>
+                                                        <span className={style.fz12}>¥</span>
+                                                        <span className={style.fz18}>
+                                                            {v.max_price}
+                                                        </span>
+                                                    </div>
                                                 </div>
-                                            <div className={style.team_intr}>
-                                                <div className={style.team_address}>
-                                                    常州金坛区
-                                                    </div>
-                                                <div className={style.team_type}>
-                                                    家庭亲子
-                                                    </div>
-                                                <div className={style.team_peoplenum}>
-                                                    适合2-3人
-                                                    </div>
                                             </div>
-                                            <div className={style.team_price}>
-                                                <span className={style.fz12}>¥</span>
-                                                <span className={style.fz18}>588</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        )) : ""
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -146,34 +160,40 @@ export default class Home extends Component {
                         </div>
                         <div className={`${style.item_con} ${style.desc_con}`}>
                             <div className={style.desc_box}>
+                                {
+                                    hotCityList ? hotCityList.forEach((v, i) => {
+                                        if (i % 2 === 0) {
+                                            destOne.push(v)
+                                        } else {
+                                            destTwo.push(v)
+                                        }
+                                    }) : ""
+                                }
                                 <div className={style.dest_list} style={{ width: "550px" }}>
-                                    <div className={style.dest_item} style={{ backgroundImage: "url('http://img2.yitianyishu.com/18-9-3/21343835.jpg-220_220.jpg')" }}>
-                                        <div className={style.dest_layer}>
-                                            <div className={style.dest_info}>杭州</div>
-                                        </div>
-                                    </div>
-                                    <div className={style.dest_item} style={{ backgroundImage: "url('http://img2.yitianyishu.com/18-9-3/21343835.jpg-220_220.jpg')" }}>
-                                        <div className={style.dest_layer}>
-                                            <div className={style.dest_info}>杭州</div>
-                                        </div>
-                                    </div>
-                                    <div className={style.dest_item} style={{ backgroundImage: "url('http://img2.yitianyishu.com/18-9-3/21343835.jpg-220_220.jpg')" }}>
-                                        <div className={style.dest_layer}>
-                                            <div className={style.dest_info}>杭州</div>
-                                        </div>
-                                    </div>
-                                    <div className={style.dest_item} style={{ backgroundImage: "url('http://img2.yitianyishu.com/18-9-3/21343835.jpg-220_220.jpg')" }}>
-                                        <div className={style.dest_layer}>
-                                            <div className={style.dest_info}>杭州</div>
-                                        </div>
-                                    </div>
+                                    {
+                                        destOne.map(v => (
+                                            <div key={v.city_code} className={style.dest_item} style={{ backgroundImage: `url(${v.image_url_list.small})` }}>
+                                                <div className={style.dest_layer}>
+                                                    <div className={style.dest_info}>
+                                                        {v.city_name}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))
+                                    }
                                 </div>
-                                <div className={style.dest_list}>
-                                    <div className={style.dest_item} style={{ backgroundImage: "url('http://img2.yitianyishu.com/18-9-3/21343835.jpg-220_220.jpg')" }}>
-                                        <div className={style.dest_layer}>
-                                            <div className={style.dest_info}>湖州</div>
-                                        </div>
-                                    </div>
+                                <div className={style.dest_list} style={{ width: "550px" }}>
+                                    {
+                                        destTwo.map(v => (
+                                            <div key={v.city_code} className={style.dest_item} style={{ backgroundImage: `url(${v.image_url_list.small})` }}>
+                                                <div className={style.dest_layer}>
+                                                    <div className={style.dest_info}>
+                                                        {v.city_name}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -184,6 +204,34 @@ export default class Home extends Component {
 
         )
     }
+    componentDidMount() {
+        this.props.getThemeList();
+        this.props.getSuperList();
+        this.props.getHotCityList();
+        this.props.getCarouselList();
+    }
 
 
 }
+
+const mapStateToProps = ({ home }) => ({
+    home
+})
+
+const mapDispatchToProps = (dispatch) => ({
+    getThemeList() {
+        dispatch(homeCreator.asyncGetTheme())
+    },
+    getSuperList() {
+        dispatch(homeCreator.asyncGetSuper())
+    },
+    getHotCityList() {
+        dispatch(homeCreator.asyncGetHotCity())
+    },
+    getCarouselList() {
+        dispatch(homeCreator.asyncGetCarousel())
+    },
+
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

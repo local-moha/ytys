@@ -2,10 +2,15 @@ import Login from '../view/Login'
 import Index from '../view/Index'
 import Home from '../view/Home'
 import Person from '../view/Person'
+import Demo from '../components/Demo'
 export default [
     {
         path: '/login',
         component: Login
+    },
+    {
+        path: '/test',
+        component: Demo//日历的 设置着看看啥样的
     },
     // {
     //     path:'/distribution',

@@ -1,3 +1,6 @@
 export default {
-    themeList: []
+    themeList: [],
+    superList: [],
+    hotCityList: [],
+    carouselList: []
 }
