@@ -20,3 +20,7 @@ git：https://github.com/local-moha/ytys
     bug：
         1.多行文本换行省略的bug 网上的教程都试过 没用。。
         2.superList获取成功后 渲染时 在控制台有数据 但是页面中初次能渲染 刷新数据渲染不了 控制台Element中都是有数据的  
+    解决bug：
+        1.解决[Intervention] Unable to preventDefault inside passive event listener due to target being treated as passive. See URL报错 
+        bug是UI库的轮播组件的滑动切换报错
+        https://www.fxyh97.com/index.php/archives/173/
