@@ -1,11 +1,6 @@
-$yh:"Microsoft yahei";
-
-html {
-   font-size: 62.5%; 
-   font-family:$yh;
-   font-size:calc(100vw/7.5);      // 移动端 适配    750:100 = 100vw:x  7.5:1 = 100vw:x  x =100vw/7.5
-   font-size:-webket-calc(100vw/7.5);   // 设计稿宽度  640px 
-   
+html,body{
+    width: 100%;
+    height: 100%;
 }
 body,h1,h2,h3,h4,h5,h6,blockquote,ol,ul,dl,dd,p,textarea,input,select,option,form {
     margin:0; padding:0;
@@ -36,7 +31,7 @@ ul,ol {
 .clearfix:after {
     content:'.';display:block;height:0;clear:both;visibility:hidden;
 }
-//.clearfix {*zoom:1;}
+.clearfix {*zoom:1;}
 .clear {
     clear:both;height:0;overflow:hidden;
 }
@@ -68,5 +63,14 @@ blockquote:before, blockquote:after, q:before, q:after {
   content: none;
 }
 textarea {
-    overflow:auto;resize:none;
+    overflow:auto;
+    resize:none;
 }
+
+div, span {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+

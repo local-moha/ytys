@@ -5,10 +5,10 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {
   BrowserRouter as Router
-} from "react-router-dom"
+} from "react-router-dom";
 import 'zarm/dist/zarm.min.css';
 import { Button, Cell } from 'zarm';
-import './assets/css/common.scss'
+import './assets/css/index.scss'
 import "lib-flexible";
 ReactDOM.render(
   <React.StrictMode>

@@ -1,7 +1,10 @@
-import Login from '../view/Login'
+import Login from '../view/Login';
+import Index from '../view/Index';
+import Superhotel_home from "../view/Superhotel_home";
  export default [
     {
         path:'/login',
+        exact:true,
         component:Login
     },
     // {
@@ -12,29 +15,29 @@ import Login from '../view/Login'
     //     path:'/error',
     //     component:Error
     // },
-    // {
-    //     path:'/',
-    //     component:Index,
-    //     childrens:[
-    //         {
-    //             path:'/Home/',
-    //             component:Home
-    //         },
-    //         {
-    //             path:'/superhotel_home.html',
-    //             component:Superhotel_home
-    //         },
-    //         {
-    //             path:'/superhotel_home.html',
-    //             component:Server
-    //         },
-    //         {
-    //             path:'/person.html',
-    //             component:Person,
-    //             isAuthorization:true
-    //         },
-    //     ]
-    // },
+    {
+        path:'/',
+        component:Index,
+        childrens:[
+            // {
+            //     path:'/Home',
+            //     component:Home
+            // },
+            {
+                path:'/superhotel_home.html',
+                component:Superhotel_home
+            },
+            // {
+            //     path:'/superhotel_home.html',
+            //     component:Server
+            // },
+            // {
+            //     path:'/person.html',
+            //     component:Person,
+            //     isAuthorization:true
+            // },
+        ]
+    },
     // {
     //     path:'/meisu',
     //     component:Meisu,
