@@ -5,15 +5,19 @@ import * as serviceWorker from './serviceWorker';
 import {
   BrowserRouter as Router
 } from "react-router-dom"
+// import { Provider } from 'react-redux'
+// import store from './store'
 import 'zarm/dist/zarm.min.css';
 import { Button, Cell } from 'zarm';
 import './assets/css/common.scss'
 import "lib-flexible";
 ReactDOM.render(
   <React.StrictMode>
+    {/* <Provider store={store}> */}
     <Router>
       <App />
     </Router>
+    {/* </Provider> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

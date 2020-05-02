@@ -19,6 +19,7 @@ class Myrouter extends Component {
                         <Route key={v.path} exact={v.exact} path={v.path} render={() => <GuardRouter {...v}></GuardRouter>} ></Route>
                     ))
                 }
+                <Redirect to={'/minsu/index.html'} from='/'></Redirect>
                 <Redirect to={'/error'} from='*'></Redirect>
             </Switch>
         );

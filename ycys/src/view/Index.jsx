@@ -4,9 +4,7 @@ import axios from 'axios'
 export default class Index extends Component {
     render() {
         return (
-            <div>
-                <Myrouter router={this.props.childrens}></Myrouter>
-            </div>
+            <Myrouter router={this.props.childrens}></Myrouter>
         )
     }
 }

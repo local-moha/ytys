@@ -1,6 +1,7 @@
 import Login from '../view/Login'
 import Index from '../view/Index'
 import Home from '../view/Home'
+import Person from '../view/Person'
 export default [
     {
         path: '/login',
@@ -15,12 +16,12 @@ export default [
     //     component:Error
     // },
     {
-        path: '/',
-        exact: true,
+        path: '/minsu',
+        // exact: true,
         component: Index,
         childrens: [
             {
-                path: '/',
+                path: '/minsu/index.html',
                 component: Home
             },
             // {
@@ -31,11 +32,12 @@ export default [
             //     path:'/superhotel_home.html',
             //     component:Server
             // },
-            // {
-            //     path:'/person.html',
-            //     component:Person,
-            //     isAuthorization:true
-            // },
+            {
+                path: '/minsu/person.html',
+                component: Person,
+                exact: true,
+                // isAuthorization: true
+            },
         ]
     },
     // {
