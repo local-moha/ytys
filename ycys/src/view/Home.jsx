@@ -31,7 +31,7 @@ export class Home extends Component {
                             <div className={style.location_address}>武汉</div>
                             <div className={style.current_location}>
                                 定位到当前
-                                </div>
+                            </div>
                         </div>
                         <div className={style.join_item}>
 
