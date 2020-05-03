@@ -24,7 +24,6 @@ export class Home extends Component {
                 <div className={style.header_top}>
                     <div className={style.swiper_w}>
                         <Swiper carouselList={carouselList}></Swiper>
-
                     </div>
                     {/* className={style.} */}
                     <div className={style.search_box}>
@@ -47,12 +46,12 @@ export class Home extends Component {
                             </div>
                         </div>
                         <div className={style.search_item}>
-                            <div className={style.search_input}>
+                            <div className={style.search_input} onClick={() => { this.props.history.push("/meisu/search.html") }}>
                                 景点/民宿/关键字
-                                </div>
+                            </div>
                             <div className={style.search_btn}>
                                 搜索
-                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className={style.couponItem}>

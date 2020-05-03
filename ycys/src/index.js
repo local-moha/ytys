@@ -8,7 +8,7 @@ import {
 import { Provider } from 'react-redux'
 import store from './store'
 import 'zarm/dist/zarm.min.css';
-import { Button, Cell } from 'zarm';
+// import { Button, Cell } from 'zarm';
 import './assets/css/common.scss'
 import "lib-flexible";
 ReactDOM.render(

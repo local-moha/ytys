@@ -35,7 +35,7 @@ function getCarousel(carouselList) {
 export default {
     asyncGetTheme() {
         return async (dispatch) => {
-            const data = await axios.get("/meisu/banner/theme?_=" + Date.now())
+            const data = await axios.get("/minsu/banner/theme?_=" + Date.now())
             // console.log(data);
             const themeList = data.data.banner;
             dispatch(getTheme(themeList))
@@ -43,7 +43,7 @@ export default {
     },
     asyncGetSuper() {
         return async (dispatch) => {
-            const data = await axios.get("/meisu/team/team/index", {
+            const data = await axios.get("/minsu/team/team/index", {
                 params: {
                     page: 1,
                     limit: 10,
@@ -57,7 +57,7 @@ export default {
     },
     asyncGetHotCity() {
         return async (dispatch) => {
-            const data = await axios.get("/meisu/v2/site/hot-city", {
+            const data = await axios.get("/minsu/v2/site/hot-city", {
                 params: {
                     limit: 10,
                     _: Date.now()
@@ -70,14 +70,14 @@ export default {
     },
     asyncGetCarousel() {
         return async (dispatch) => {
-            const data = await axios.get("/meisu/site/carousel", {
+            const data = await axios.get("/minsu/site/carousel", {
                 params: {
                     _: Date.now()
                 }
             })
             // console.log(data);
             const carouselList = data.data;
-            console.log(carouselList);
+            // console.log(carouselList);
             dispatch(getCarousel(carouselList))
         }
     },
