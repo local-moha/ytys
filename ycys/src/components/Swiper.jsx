@@ -8,7 +8,11 @@ export default class Swiper extends Component {
             return this.props.carouselList.map((item, i) => {
                 // console.log(item);
                 return (
-                    <div className="carousel__item__pic" key={+i}>
+                    <div className="carousel__item__pic" key={+i} onClick={() => {
+                        // 跳转???????????
+                        console.log(item.url);
+
+                    }}>
                         <img className={style.swiper} src={item.image_url} alt="" draggable={false} />
                         {
                             item.desc ? (

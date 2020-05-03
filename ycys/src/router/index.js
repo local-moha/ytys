@@ -2,18 +2,19 @@ import Login from '../view/Login'
 import Index from '../view/Index'
 import Home from '../view/Home'
 import Person from '../view/Person'
-import Demo from '../components/Demo'
+// import Demo from '../components/Demo'
 import Meisu from '../view/Meisu'
 import Search from '../view/Search'
+import GetCoupon from '../view/GetCoupon'
 export default [
     {
         path: '/login',
         component: Login
     },
-    {
-        path: '/test',
-        component: Demo//日历的 设置着看看啥样的
-    },
+    // {
+    //     path: '/test',
+    //     component: Demo//日历的 设置着看看啥样的
+    // },
     // {
     //     path:'/distribution',
     //     component:Distribution
@@ -63,10 +64,11 @@ export default [
                 path: '/meisu/search.html',
                 component: Search
             },
-            //         {
-            //             path:'/meisu/getCoupon.html',
-            //             component:GetCoupon
-            //         },
+            {
+                path: '/meisu/getCoupon.html',
+                component: GetCoupon,
+                // isAuthorization: true
+            },
             //         {
             //             path:'/meisu/stock_list.html',
             //             component:Stock_list

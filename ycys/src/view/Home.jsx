@@ -8,7 +8,7 @@ import { date } from '../filters/index'
 
 export class Home extends Component {
     render() {
-        // console.log(this.props.home);
+        // console.log(this.props);
         const { themeList, superList, hotCityList, carouselList } = this.props.home;
         // console.log(carouselList);
         const destOne = [];
@@ -46,7 +46,9 @@ export class Home extends Component {
                             </div>
                         </div>
                         <div className={style.search_item}>
-                            <div className={style.search_input} onClick={() => { this.props.history.push("/meisu/search.html") }}>
+                            <div className={style.search_input} onClick={() => {
+                                this.props.history.push("/meisu/search.html")
+                            }}>
                                 景点/民宿/关键字
                             </div>
                             <div className={style.search_btn}>
@@ -54,12 +56,19 @@ export class Home extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className={style.couponItem}>
+                    <div className={style.couponItem} style={{
+                        display: localStorage.hasgetCoupon ? "none" : "block"
+                    }} onClick={() => {
+                        this.props.history.push("/meisu/getCoupon.html")
+                    }}>
                         您有1000元优惠券尚未领取
                             <div className={style.go_coupon}>立即领取></div>
                     </div>
                     <div className={style.entry_w}>
-                        <div className={`${style.entry} ${style.stock_entry}`}>特价房券</div>
+                        <div className={`${style.entry} ${style.stock_entry}`} onClick={() => {
+                            //跳转特价房券./meisu/stock_list.html
+                            // this.props.history.push("/meisu/stock_list.html")
+                        }}>特价房券</div>
                         <div className={`${style.entry} ${style.sale_entry}`}>限时抢购</div>
                         <div className={`${style.entry} ${style.super_entry}`}>超值套餐</div>
                         <div className={`${style.entry} ${style.cutrpice_entry}`}>砍价服务</div>
@@ -113,7 +122,10 @@ export class Home extends Component {
                                 <div className={style.super_list} style={{ width: "3450px" }}>
                                     {
                                         superList ? superList.map(v => (
-                                            <div key={v.team_id} className={`${style.super_item} ${style.team_item}`}>
+                                            <div key={v.team_id} className={`${style.super_item} ${style.team_item}`} onClick={() => {
+                                                //跳转super_detail.html?team_id
+                                                // this.props.history.push("/meisu/super_detail.html?team_id=" + v.team_id)
+                                            }}>
                                                 <div className={style.team_img_w}>
                                                     <div className={`${style.team_img} ${style.bg_img}`} style={{ backgroundImage: `url(${v.image_url_list.middle})` }}></div>
                                                     <div className={style.team_timebox}>
