@@ -8,8 +8,10 @@ export class Search extends Component {
         this.state = {}
     }
     render() {
-        console.log(this.props.search);
+        // console.log(this.props.search);
         const { hotWord, suggestion } = this.props.search;
+        console.log(suggestion);
+
         // const input = document.querySelector(".search_input__3NhJj");
         return (
             <div className={style.page}>
@@ -91,8 +93,14 @@ export class Search extends Component {
                                 {
                                     suggestion.map((v, i) => (
                                         <div key={i} className={style.search_li} onClick={() => {
-                                            let searchHisList = [];
-                                            searchHisList.push(document.querySelector(".search_input__3NhJj").value)
+                                            let searchHisList = []
+                                            if (localStorage.searchHisList) {
+                                                searchHisList = JSON.parse(localStorage.searchHisList);
+                                            }
+                                            const search_val = document.querySelector(".search_input__3NhJj").value
+                                            if (!searchHisList.includes(search_val)) {
+                                                searchHisList.push(search_val)
+                                            }
                                             // console.log(searchHisList);
                                             localStorage.searchHisList = JSON.stringify(searchHisList);
                                             //跳转mno_detail.html?mno=m5c74f7ee7334a

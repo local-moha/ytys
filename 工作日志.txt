@@ -26,4 +26,7 @@ git：https://github.com/local-moha/ytys
         https://www.fxyh97.com/index.php/archives/173/
 ****************************5.3***********************************************
 万为明：
-    1.完成search.html
+    1.完成search.html 
+        实现功能： 通过redux获取数据并渲染数据 与首页面的交互 基本功能
+    2.完成getCoupon.html
+        实现功能： 通过redux获取数据并渲染数据 完成基本功能
