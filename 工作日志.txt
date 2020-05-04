@@ -30,3 +30,9 @@ git：https://github.com/local-moha/ytys
         实现功能： 通过redux获取数据并渲染数据 与首页面的交互 基本功能
     2.完成getCoupon.html
         实现功能： 通过redux获取数据并渲染数据 完成基本功能
+****************************5.4***********************************************
+万为明：
+    1.完成主题页 theme.html
+    2.封装回到首页公共组件 BtnGoHome.jsx
+    3.封装底部导航公共组件 MyNav.jsx
+    4.封装地址栏传参截取参数的方法 filters/index.js-->getThemeId()

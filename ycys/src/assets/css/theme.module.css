@@ -1,0 +1,142 @@
+.page{
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 100%;
+}
+.top {
+    height: 420px;
+    position: relative;
+    background-size: cover;
+}
+.dateselect, .join_item {
+    border-radius: 2px;
+}
+.filter_time {
+    position: absolute;
+    bottom: 24px;
+    left: 40px;
+    height: 136px;
+    width: 670px;
+    background: #fff;
+}
+.city_list {
+    margin-bottom: 24px;
+    overflow: hidden;
+    /* margin-right: -40px; */
+    padding-left: 34px;
+}
+.city_li.active {
+    color: #fff;
+    color: #ff4f54;
+    background: rgba(255,79,84,.1);
+    border: 2px solid #ff4f54;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.city_li {
+    float: left;
+    margin: 24px 20px 0 0;
+    padding: 0 10px;
+    height: 64px;
+    width: 152px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 64px;
+    background: #fff;
+    border-radius: 32px;
+    text-align: center;
+    font-size: 26px;
+    color: #666;
+    -webkit-box-shadow: 0 0 2px 0 rgba(0,0,0,.05);
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.05);
+}
+.mnoitem {
+    padding: 0 40px;
+    margin-bottom: 48px;
+}
+.mnoitem_img_w {
+    position: relative;
+    height: 420px;
+    border-radius: 12px;
+}
+.mnoitem_img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    -webkit-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+}
+.bg_image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+.mnoitem_intr {
+    overflow: hidden;
+    line-height: 50px;
+    margin: 14px 0 6px;
+}
+.quick_pay {
+    float: left;
+    margin-right: 16px;
+    margin-top: 4px;
+    line-height: 40px;
+    padding: 0 8px 0 26px;
+    background: #ffeee9 url("../img/queck_pay.png") no-repeat 4px/20px 20px;
+    font-size: 24px;
+    border-radius: 4px;
+    color: #f66940;
+}
+.intr_name {
+    font-size: 36px;
+    font-weight: 700;
+    float: left;
+    max-width: 560px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.mno_feature_w {
+    position: relative;
+}
+.mno_feature {
+    line-height: 40px;
+    height: 42px;
+    font-size: 24px;
+    overflow: hidden;
+    margin-bottom: 6px;
+    width: 100%;
+    white-space: nowrap;
+}
+.feature_location, .feature_mnoitem {
+    line-height: 40px;
+    height: 40px;
+    display: inline-block;
+}
+.feature_location {
+    padding-left: 28px;
+    color: #f66940;
+    background: url("../img/location.png") no-repeat 0 6px/26px 26px;
+    border-radius: 4px;
+    margin-right: 14px;
+}
+.feature_mnoitem {
+    margin-right: 16px;
+    color: #666;
+}
+.feature_mask {
+    width: 114px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url() no-repeat 0 0/114px 40px;
+}
+
+.mno_price {
+    color: #ff4f54;
+    width: 200px;
+    font-size: 36px;
+}

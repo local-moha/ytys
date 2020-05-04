@@ -6,6 +6,7 @@ import Person from '../view/Person'
 import Meisu from '../view/Meisu'
 import Search from '../view/Search'
 import GetCoupon from '../view/GetCoupon'
+import Theme from '../view/Theme'
 export default [
     {
         path: '/login',
@@ -81,10 +82,10 @@ export default [
             //             path:'/meisu/cutprice.html',
             //             component:Cutprice
             //         },
-            //         {
-            //             path:'/meisu/theme.html',
-            //             component:Theme
-            //         },
+            {
+                path: '/meisu/theme.html',
+                component: Theme
+            },
             //         {
             //             path:'/meisu/lowprice.html',
             //             component:Lowprice

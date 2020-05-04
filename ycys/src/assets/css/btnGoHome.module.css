@@ -1,0 +1,13 @@
+.btn_go_home {
+    position: fixed;
+    z-index: 1;
+    bottom: 188px;
+    left: 0;
+    width: 144px;
+    height: 116px;
+    background: url("../img/gohome.png") no-repeat 0 0/100%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}

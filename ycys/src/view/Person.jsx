@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import style from '../assets/css/Person.module.css'
+import MyNav from '../components/MyNav'
 export default class Person extends Component {
-    componentDidMount(){
+    componentDidMount() {
         // console.log("我的",this.props)
     }
     render() {
@@ -9,9 +10,9 @@ export default class Person extends Component {
             <div>
                 <div className={style.page}>
                     <div className={style.header}>
-                        <img src="https://wechat.yitianyishu.com/minsu/static/image/account_image_bg@2x.png" className={style.header_bg} alt=""/>
+                        <img src="https://wechat.yitianyishu.com/minsu/static/image/account_image_bg@2x.png" className={style.header_bg} alt="" />
                         <div className={style.header_con}>
-                            <img className={style.avatar} src="https://cdn.yitianyishu.com/js/dist/images/lazy.png" alt=""/>
+                            <img className={style.avatar} src="https://cdn.yitianyishu.com/js/dist/images/lazy.png" alt="" />
                             <div className={style.nickname}>177****4970</div>
                         </div>
                     </div>
@@ -21,7 +22,7 @@ export default class Person extends Component {
                         <div className={style.order_num}>代入住</div>
                     </div>
                 </div>
-                
+                <MyNav {...this.props}></MyNav>
             </div>
         )
     }

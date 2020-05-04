@@ -4,7 +4,7 @@ import homeCreator from '../store/actionCreator/home'
 import style from '../assets/css/home.module.css'
 import MyNav from '../components/MyNav'
 import Swiper from '../components/Swiper'
-import { date } from '../filters/index'
+import { date, changeArr } from '../filters/index'
 
 export class Home extends Component {
     render() {
@@ -13,6 +13,8 @@ export class Home extends Component {
         // console.log(carouselList);
         const destOne = [];
         const destTwo = [];
+        const newThemeList = changeArr(themeList, 2);
+        const newHotCityList = changeArr(hotCityList, 5);
         return (
             <div className={style.page}>
                 {/* <div className={style.appdownload_bar}>
@@ -33,8 +35,8 @@ export class Home extends Component {
                                 定位到当前
                             </div>
                         </div>
+                        {/* 日期封成公共组件 */}
                         <div className={style.join_item}>
-
                             <div className={`${style.jitem_item} ${style.fl}`}>
                                 <div className={style.jitem_action}>入住</div>
                                 <div className={style.jitem_date}>5月1日</div>
@@ -45,6 +47,7 @@ export class Home extends Component {
                                 <div className={style.jitem_date}>5月2日</div>
                             </div>
                         </div>
+
                         <div className={style.search_item}>
                             <div className={style.search_input} onClick={() => {
                                 this.props.history.push("/meisu/search.html")
@@ -74,34 +77,34 @@ export class Home extends Component {
                         <div className={`${style.entry} ${style.cutrpice_entry}`}>砍价服务</div>
                     </div>
                     <div className={style.recommend_item}>
-                        <div className={style.ovh} style={{ marginBottom: "16px" }}>
-                            <div className={`${style.large_box} ${style.fl}`} style={{ backgroundImage: `url(${themeList.length > 0 ? themeList[0].image.middle : ""})` }}>
-                                <div className={style.re_info}>
-                                    <div className={style.re_tit}>{themeList.length > 0 ? themeList[0].title : ""}</div>
-                                    <div className={style.re_intr}>{themeList.length > 0 ? themeList[0].subtitle : ""}</div>
+                        {
+                            newThemeList.map((subList, index) => (
+                                <div key={index} className={style.ovh} style={{
+                                    marginBottom: (index ? 0 : "16px")
+                                }}>
+                                    {
+                                        subList.map((v, i) => (
+                                            <div key={v.banner_id} className={
+                                                index ? (i ? (`${style.large_box} ${style.fr}`) : (`${style.small_box} ${style.fl}`)) : (i ? (`${style.small_box} ${style.fr}`) : `${style.large_box} ${style.fl}`)
+                                            } style={{
+                                                backgroundImage: `url(${v.image.middle})`
+                                            }} onClick={() => {
+                                                this.props.history.push("/meisu/theme.html?theme_id=" + v.banner_id)
+                                            }}>
+                                                <div className={style.re_info}>
+                                                    <div className={style.re_tit}>
+                                                        {v.title}
+                                                    </div>
+                                                    <div className={style.re_intr}>
+                                                        {v.subtitle}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))
+                                    }
                                 </div>
-                            </div>
-                            <div className={`${style.small_box} ${style.fr}`} style={{ backgroundImage: `url(${themeList.length > 0 ? themeList[1].image.middle : ""})` }}>
-                                <div className={style.re_info}>
-                                    <div className={style.re_tit}>{themeList.length > 0 ? themeList[1].title : ""}</div>
-                                    <div className={style.re_intr}>{themeList.length > 0 ? themeList[1].subtitle : ""}</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={style.ovh} >
-                            <div className={`${style.small_box} ${style.fl}`} style={{ backgroundImage: `url(${themeList.length > 0 ? themeList[2].image.middle : ""})` }}>
-                                <div className={style.re_info}>
-                                    <div className={style.re_tit}>{themeList.length > 0 ? themeList[2].title : ""}</div>
-                                    <div className={style.re_intr}>{themeList.length > 0 ? themeList[2].subtitle : ""}</div>
-                                </div>
-                            </div>
-                            <div className={`${style.large_box} ${style.fr}`} style={{ backgroundImage: `url(${themeList.length > 0 ? themeList[3].image.middle : ""})` }}>
-                                <div className={style.re_info}>
-                                    <div className={style.re_tit}>{themeList.length > 0 ? themeList[3].title : ""}</div>
-                                    <div className={style.re_intr}>{themeList.length > 0 ? themeList[3].subtitle : ""}</div>
-                                </div>
-                            </div>
-                        </div>
+                            ))
+                        }
                     </div>
                 </div>
                 <div className={style.lowprice}></div>
@@ -172,45 +175,27 @@ export class Home extends Component {
                         <div className={`${style.item_con} ${style.desc_con}`}>
                             <div className={style.desc_box}>
                                 {
-                                    hotCityList ? hotCityList.forEach((v, i) => {
-                                        if (i % 2 === 0) {
-                                            destOne.push(v)
-                                        } else {
-                                            destTwo.push(v)
-                                        }
-                                    }) : ""
+                                    newHotCityList.map((subList, index) => (
+                                        <div key={index} className={style.dest_list} style={{ width: "550px" }}>
+                                            {
+                                                subList.map(v => (
+                                                    <div key={v.city_code} className={style.dest_item} style={{ backgroundImage: `url(${v.image_url_list.small})` }}>
+                                                        <div className={style.dest_layer}>
+                                                            <div className={style.dest_info}>
+                                                                {v.city_name}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                ))
+                                            }
+                                        </div>
+                                    ))
                                 }
-                                <div className={style.dest_list} style={{ width: "550px" }}>
-                                    {
-                                        destOne.map(v => (
-                                            <div key={v.city_code} className={style.dest_item} style={{ backgroundImage: `url(${v.image_url_list.small})` }}>
-                                                <div className={style.dest_layer}>
-                                                    <div className={style.dest_info}>
-                                                        {v.city_name}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        ))
-                                    }
-                                </div>
-                                <div className={style.dest_list} style={{ width: "550px" }}>
-                                    {
-                                        destTwo.map(v => (
-                                            <div key={v.city_code} className={style.dest_item} style={{ backgroundImage: `url(${v.image_url_list.small})` }}>
-                                                <div className={style.dest_layer}>
-                                                    <div className={style.dest_info}>
-                                                        {v.city_name}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        ))
-                                    }
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <MyNav></MyNav>
+                <MyNav {...this.props}></MyNav>
             </div>
 
         )
