@@ -1,31 +1,46 @@
 import Login from '../view/Login'
+import Meisu from '../view/Minsu'
+import Error from '../view/Error'
+import Distribution from '../view/Distribution'
+import Detail from '../view/Detail'
+import DistributionIndex from '../view/DistributionIndex'
+import Stock_list from '../view/Stock_list'
  export default [
     {
         path:'/login',
         component:Login
     },
-    // {
-    //     path:'/distribution',
-    //     component:Distribution
-    // },
-    // {
-    //     path:'/error',
-    //     component:Error
-    // },
+    {
+        path:'/distribution',
+        component:DistributionIndex,
+        childrens:[
+            {
+                path:'/distribution',
+                component:Distribution,
+                exact:true
+            },
+            {
+                path:'/distribution/detail.html',
+                component:Detail,
+                // isAuthorization:true
+            }
+        ]
+    },
     // {
     //     path:'/',
     //     component:Index,
     //     childrens:[
     //         {
     //             path:'/',
-    //             component:Home
+    //             component:Home,
+                    // exact:true
     //         },
     //         {
     //             path:'/superhotel_home.html',
     //             component:Superhotel_home
     //         },
     //         {
-    //             path:'/superhotel_home.html',
+    //             path:'/Server',
     //             component:Server
     //         },
     //         {
@@ -35,18 +50,14 @@ import Login from '../view/Login'
     //         },
     //     ]
     // },
-    // {
-    //     path:'/meisu',
-    //     component:Meisu,
-    //     childrens:[
-    //         {
-    //             path:'/meisu/super_theme.html',
-    //             component:Super_theme
-    //         },
-    //         {
-    //             path:'/meisu/select_location',
-    //             component:Select_location
-    //         },
+    {
+        path:'/meisu',
+        component:Meisu,
+        childrens:[
+            // {
+            //     path:'/meisu/select_location',
+            //     component:Select_location
+            // },
     //         {
     //             path:'/meisu/search',
     //             component:Search
@@ -55,10 +66,10 @@ import Login from '../view/Login'
     //             path:'/meisu/getCoupon.html',
     //             component:GetCoupon
     //         },
-    //         {
-    //             path:'/meisu/stock_list.html',
-    //             component:Stock_list
-    //         },
+            {
+                path:'/meisu/stock_list.html',
+                component:Stock_list
+            },
     //         {
     //             path:'/meisu/super_list.html',
     //             component:Super_list
@@ -165,8 +176,13 @@ import Login from '../view/Login'
     //             path:'/meisu/mno_order.html',
     //             component:Mno_order
     //         }
-    //     ]
-    // }
+        ]
+    },
+    {
+        path:'/error',
+        component:Error,
+       
+    },
 ]
    
     

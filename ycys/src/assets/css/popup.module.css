@@ -1,0 +1,15 @@
+.area_item{
+    font-size: 50px;
+    height: 88px;
+    border-bottom: 1px solid hsla(0,0%,84.7%,.7);
+    margin: 0px 0px 0px 30px;
+    line-height: 87px;
+    background: #fff;
+}
+.active_item{
+    color: #ff4f54;
+}
+.box{
+    width: 100%;
+    height: 50px;
+}

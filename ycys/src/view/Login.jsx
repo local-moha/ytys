@@ -8,10 +8,10 @@ class Login extends Component {
         this.state = {
             getcode: '获取验证码',
             phoneNum: '',
-            code: ''
+            code: '',
+            login:localStorage.login || null
         }
     }
-
     render() {
         return (
             <div className={style.login}>
@@ -31,6 +31,7 @@ class Login extends Component {
     }
     changePhone(e) {
         this.setState({
+
             phoneNum: e.target.value,
         })
     }
@@ -41,21 +42,30 @@ class Login extends Component {
     }
     async getcode() {
         // console.log(this);
-        const codeInfo = await this.$axios.post('/sendCode', {
-            phoneNum:this.state.phoneNum,
-        })
-        console.log(codeInfo);
+        if(!this.state.phoneNum){
+            const reg = /^1[3456789]\d{9}$/
+            if(reg.test(this.state.phoneNum)){
+
+                const codeInfo = await this.$axios.post('/api/sendCode', {
+                    phoneNum:this.state.phoneNum,
+                })
+                console.log(codeInfo.code);
+            }else{
+                alert('请输入正确电话号码')
+            }
+        }
         
     };
     async login(){
-       const data =  await this.$axios.post('/login',{
-            phoneNum:this.state.phoneNum,
-            code:this.state.code
-        })
-        console.log(data);
-        
+        if(this.state.phoneNum&&this.state.code){
+            const data =  await this.$axios.post('/api/login',{
+                 phoneNum:this.state.phoneNum,
+                 code:this.state.code
+             })
+             console.log(data);
+             localStorage.login = data.phoneNum
+        }
     }
-
 }
 
 
