@@ -86,7 +86,7 @@ export class Search extends Component {
                         </div>
                     </div>
                 </div>
-                <div className={style.search_content}>
+                <div className={style.search_content} style={{ display: "none" }}>
                     {
                         suggestion ? (
                             <div className={style.search_list}>

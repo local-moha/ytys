@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import themeDataCreator from '../store/actionCreator/theme'
-import { getThemeId } from '../filters'
+import { getThemeId, date2Data } from '../filters'
 import style from '../assets/css/theme.module.css'
 import BtnGoHome from '../components/BtnGoHome'
+import Calender from '../components/CalenderJsx'
 export class Theme extends Component {
     constructor(props) {
         super(props)
@@ -24,6 +25,7 @@ export class Theme extends Component {
                 }}>
                     <div className={`${style.dateselect} ${style.filter_time}`}>
                         {/* 日期的公共组件 */}
+                        <Calender></Calender>
                     </div>
                 </div>
                 <div className={`${style.city_list} ${style.navlist}`}>
@@ -110,7 +112,9 @@ const mapStateToProps = ({ theme }) => ({
 
 const mapDispatchToProps = (dispatch) => ({
     getThemeDataList({ banner_id }) {
-        dispatch(themeDataCreator.asyncGetThemeData({ banner_id }))
+        const start_date = date2Data(JSON.parse(localStorage.orderDate).start_date)
+        const end_date = date2Data(JSON.parse(localStorage.orderDate).end_date)
+        dispatch(themeDataCreator.asyncGetThemeData({ banner_id, start_date, end_date }))
     }
 })
 

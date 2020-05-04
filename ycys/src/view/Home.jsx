@@ -5,14 +5,18 @@ import style from '../assets/css/home.module.css'
 import MyNav from '../components/MyNav'
 import Swiper from '../components/Swiper'
 import { date, changeArr } from '../filters/index'
+import Calender from '../components/CalenderJsx'
 
 export class Home extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+        }
+    }
     render() {
         // console.log(this.props);
         const { themeList, superList, hotCityList, carouselList } = this.props.home;
         // console.log(carouselList);
-        const destOne = [];
-        const destTwo = [];
         const newThemeList = changeArr(themeList, 2);
         const newHotCityList = changeArr(hotCityList, 5);
         return (
@@ -24,10 +28,11 @@ export class Home extends Component {
                     <div className={style.appdownload_btn}>立即抢购</div>
                 </div> */}
                 <div className={style.header_top}>
+                    {/* 轮播图 */}
                     <div className={style.swiper_w}>
                         <Swiper carouselList={carouselList}></Swiper>
                     </div>
-                    {/* className={style.} */}
+                    {/* 定位 */}
                     <div className={style.search_box}>
                         <div className={style.location_item}>
                             <div className={style.location_address}>武汉</div>
@@ -36,7 +41,8 @@ export class Home extends Component {
                             </div>
                         </div>
                         {/* 日期封成公共组件 */}
-                        <div className={style.join_item}>
+                        <Calender></Calender>
+                        {/* <div className={style.join_item}>
                             <div className={`${style.jitem_item} ${style.fl}`}>
                                 <div className={style.jitem_action}>入住</div>
                                 <div className={style.jitem_date}>5月1日</div>
@@ -46,15 +52,17 @@ export class Home extends Component {
                                 <div className={style.jitem_action}>离开</div>
                                 <div className={style.jitem_date}>5月2日</div>
                             </div>
-                        </div>
-
+                        </div> */}
+                        {/* 搜索 */}
                         <div className={style.search_item}>
                             <div className={style.search_input} onClick={() => {
                                 this.props.history.push("/meisu/search.html")
                             }}>
                                 景点/民宿/关键字
                             </div>
-                            <div className={style.search_btn}>
+                            <div className={style.search_btn} onClick={() => {
+                                // this.props.history.push("/meisu/mno_list.html")
+                            }}>
                                 搜索
                             </div>
                         </div>
@@ -124,6 +132,7 @@ export class Home extends Component {
                             <div className={style.super_scroll}>
                                 <div className={style.super_list} style={{ width: "3450px" }}>
                                     {
+                                        // console.log(superList),
                                         superList ? superList.map(v => (
                                             <div key={v.team_id} className={`${style.super_item} ${style.team_item}`} onClick={() => {
                                                 //跳转super_detail.html?team_id

@@ -36,3 +36,5 @@ git：https://github.com/local-moha/ytys
     2.封装回到首页公共组件 BtnGoHome.jsx
     3.封装底部导航公共组件 MyNav.jsx
     4.封装地址栏传参截取参数的方法 filters/index.js-->getThemeId()
+    5.封装一系列日期有关的过滤器
+    6.封装日期选择器公共组件 CalenderJsx.jsx

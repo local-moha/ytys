@@ -17,16 +17,16 @@ export default class Swiper extends Component {
                         {
                             item.desc ? (
                                 <div className={style.swiper_title}>
-
-                                    <LinesEllipsis
-                                        className={style.swiper_desc}
-                                        text={item.desc}
-                                        maxLine='1'
-                                        ellipsis="..."
-                                        trimRight
-                                        basedOn="letters"
-                                    />
-
+                                    <div className={style.swiper_desc}>
+                                        {item.desc}
+                                        {/* <LinesEllipsis
+                                            text={item.desc}
+                                            maxLine={3}
+                                            ellipsis="..."
+                                            trimRight
+                                            basedOn="letters"
+                                        /> */}
+                                    </div>
                                     <div className={style.swiper_subtitle}>{item.text}</div>
                                 </div>) : ""
                         }
@@ -42,6 +42,7 @@ export default class Swiper extends Component {
                 swipeable
                 direction="left"
                 showPagination
+                autoPlayIntervalTime={5000}
             >
                 {swiperRender()}
             </Carousel>
