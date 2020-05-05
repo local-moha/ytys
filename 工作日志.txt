@@ -38,3 +38,7 @@ git：https://github.com/local-moha/ytys
     4.封装地址栏传参截取参数的方法 filters/index.js-->getThemeId()
     5.封装一系列日期有关的过滤器
     6.封装日期选择器公共组件 CalenderJsx.jsx
+****************************5.5***********************************************
+万为明：
+    1.修复了日期选择器组件的小bug
+    2.filters中的getThemeId方法是获取地址栏传参(单个参数)的方法 地址栏传参接收在this.props.location.search中接收

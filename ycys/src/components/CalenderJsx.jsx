@@ -9,7 +9,7 @@ export default class CalendarJsx extends Component {
             visible: {
                 popBottom: false,
             },
-            value: [JSON.parse(localStorage.orderDate).start_date, JSON.parse(localStorage.orderDate).end_date] || [orderDate(Date.now()), orderDate(Date.now() + 1000 * 60 * 60 * 24)],
+            value: localStorage.orderDate ? [JSON.parse(localStorage.orderDate).start_date, JSON.parse(localStorage.orderDate).end_date] : [orderDate(Date.now()), orderDate(Date.now() + 1000 * 60 * 60 * 24)],
             calendarProps: {
                 visible: false,
                 multiple: true,
@@ -41,26 +41,30 @@ export default class CalendarJsx extends Component {
     }
     render() {
         // console.log(this.props);
-
         const { visible } = this.state;
         return (
             <React.Fragment>
-
                 {/* 日期封成公共组件 */}
                 <div className={style.join_item} onClick={() => { this.toggle('popBottom'); }}>
                     <div className={`${style.jitem_item} ${style.fl}`}>
                         <div className={style.jitem_action}>入住</div>
                         <div className={style.jitem_date}>
-                            {Date2CN(JSON.parse(localStorage.orderDate).start_date)}
+                            {
+                                localStorage.orderDate ? Date2CN(JSON.parse(localStorage.orderDate).start_date) : Date2CN(orderDate(Date.now()))
+                            }
                         </div>
                     </div>
                     <div className={style.jitem_duaring}>
-                        {countDate(JSON.parse(localStorage.orderDate).start_date, JSON.parse(localStorage.orderDate).end_date)}
+                        {
+                            localStorage.orderDate ? countDate(JSON.parse(localStorage.orderDate).start_date, JSON.parse(localStorage.orderDate).end_date) : countDate(orderDate(Date.now()), orderDate(Date.now() + 1000 * 60 * 60 * 24))
+                        }
                     </div>
                     <div className={`${style.jitem_item} ${style.fr}`}>
                         <div className={style.jitem_action}>离开</div>
                         <div className={style.jitem_date}>
-                            {Date2CN(JSON.parse(localStorage.orderDate).end_date)}
+                            {
+                                localStorage.orderDate ? Date2CN(JSON.parse(localStorage.orderDate).end_date) : Date2CN(orderDate(Date.now() + 1000 * 60 * 60 * 24))
+                            }
                         </div>
                     </div>
                 </div>

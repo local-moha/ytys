@@ -60,8 +60,7 @@ export class Theme extends Component {
         // console.log(hotelList);
         return hotelList.map(v => (
             <div key={v.mno} className={style.mnoitem} onClick={() => {
-                alert("内个sei 你写的mno_detail.html好了没")
-                // this.props.history.push("/meisu/mno_detail.html?mno=" + v.mno)
+                this.props.history.push("/meisu/mno_detail.html?mno=" + v.mno)
             }}>
                 <div className={style.mnoitem_img_w}>
                     <div className={`${style.mnoitem_img} ${style.bg_image}`} style={{

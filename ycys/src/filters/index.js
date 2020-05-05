@@ -19,7 +19,7 @@ const getThemeId = (str) => {
     const newStr = str.split("=")[1]
     return newStr;
 }
-//换算yyyy-mm-dd
+//将时间戳换算yyyy-mm-dd
 const orderDate = (date) => {
     const newDate = new Date(date);
     return newDate.getFullYear() + "-" +

@@ -50,7 +50,7 @@
 }
  .btn_sure {
     width: 670px;
-    margin: 0 auto 10px;
+    margin: 0 auto ;
     height: 88px;
     line-height: 88px;
     text-align: center;
@@ -58,7 +58,7 @@
     background: #f63c41 linear-gradient(151.7deg,rgba(255,196,117,.41),rgba(253,183,48,0));
     -webkit-box-shadow: 4px 4px 12px 0 rgba(255,79,84,.61);
     box-shadow: 4px 4px 12px 0 rgba(255,79,84,.61);
-    border-radius: 10px;
+    /* border-radius: 10px; */
     font-size: 32px;
     letter-spacing: 2px;
 }

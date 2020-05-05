@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux'
-import home from '../reducer/home'
-import search from '../reducer/search'
-import template from '../reducer/getCoupon'
-import theme from '../reducer/theme'
+import home from './home'
+import search from './search'
+import template from './getCoupon'
+import theme from './theme'
+import mno_detail from './mno_detail'
 export default combineReducers({
     home,
     search,
     template,
-    theme
+    theme,
+    mno_detail
 })

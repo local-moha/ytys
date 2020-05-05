@@ -6,6 +6,7 @@ import Meisu from '../view/Meisu'
 import Search from '../view/Search'
 import GetCoupon from '../view/GetCoupon'
 import Theme from '../view/Theme'
+import Mno_detail from '../view/Mno_detail'
 export default [
     {
         path: '/login',
@@ -126,10 +127,10 @@ export default [
             //             path:'/meisu/mno_list.html',
             //             component:Mno_list
             //         },
-            //         {
-            //             path:'/meisu/mno_detail.html',
-            //             component:Mno_detail
-            //         },
+            {
+                path: '/meisu/mno_detail.html',
+                component: Mno_detail
+            },
             //         {
             //             path:'/meisu/superhotel_day.html',
             //             component:Superhotel_day
