@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import themeDataCreator from '../store/actionCreator/theme'
-import { getThemeId, date2Data } from '../filters'
+import { getThemeId, date2Data, orderDate } from '../filters'
 import style from '../assets/css/theme.module.css'
 import BtnGoHome from '../components/BtnGoHome'
 import Calender from '../components/CalenderJsx'
@@ -12,7 +12,8 @@ export class Theme extends Component {
             active: 0,
             listActive: [],
         }
-        this.listInit = []
+        this.listInit = [];
+        this.banner_id = getThemeId(this.props.location.search);
     }
     render() {
         const { banner, destination } = this.props.theme.themeData;
@@ -100,8 +101,13 @@ export class Theme extends Component {
         ))
     }
     componentDidMount() {
-        const banner_id = getThemeId(this.props.location.search)
-        this.props.getThemeDataList({ banner_id });
+        let start_date = date2Data(orderDate(Date.now()));
+        let end_date = date2Data(orderDate(Date.now() + 1000 * 60 * 60 * 24))
+        if (localStorage.orderDate) {
+            start_date = date2Data(JSON.parse(localStorage.orderDate).start_date)
+            end_date = date2Data(JSON.parse(localStorage.orderDate).end_date)
+        }
+        this.props.getThemeDataList(this.banner_id, start_date, end_date);
     }
 }
 
@@ -110,9 +116,7 @@ const mapStateToProps = ({ theme }) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-    getThemeDataList({ banner_id }) {
-        const start_date = date2Data(JSON.parse(localStorage.orderDate).start_date)
-        const end_date = date2Data(JSON.parse(localStorage.orderDate).end_date)
+    getThemeDataList(banner_id, start_date, end_date) {
         dispatch(themeDataCreator.asyncGetThemeData({ banner_id, start_date, end_date }))
     }
 })

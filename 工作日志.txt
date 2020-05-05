@@ -41,4 +41,4 @@ git：https://github.com/local-moha/ytys
 ****************************5.5***********************************************
 万为明：
     1.修复了日期选择器组件的小bug
-    2.filters中的getThemeId方法是获取地址栏传参(单个参数)的方法 地址栏传参接收在this.props.location.search中接收
+    2.mno_detail页面：获取数据 布局+样式 渲染一部分数据

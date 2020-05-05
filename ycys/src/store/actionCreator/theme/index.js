@@ -9,7 +9,7 @@ function getThemeData(themeData) {
     }
 }
 export default {
-    asyncGetThemeData({ banner_id, start_date = 20200520, end_date = 20200521 }) {
+    asyncGetThemeData({ banner_id, start_date, end_date }) {
         return async (dispatch) => {
             const data = await axios.get("/minsu/banner/destination", {
                 params: {

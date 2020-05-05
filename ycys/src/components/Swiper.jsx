@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Carousel } from 'zarm'
 import style from '../assets/css/home.module.css'
-import LinesEllipsis from 'react-lines-ellipsis'
+// import LinesEllipsis from 'react-lines-ellipsis'
 export default class Swiper extends Component {
     render() {
         const swiperRender = () => {
