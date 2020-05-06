@@ -4,7 +4,7 @@ import homeCreator from '../store/actionCreator/home'
 import style from '../assets/css/home.module.css'
 import MyNav from '../components/MyNav'
 import Swiper from '../components/Swiper'
-import { date, changeArr } from '../filters/index'
+import { dateChoose, changeArr } from '../filters/index'
 import Calender from '../components/CalenderJsx'
 
 export class Home extends Component {

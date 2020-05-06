@@ -11,6 +11,12 @@ import 'zarm/dist/zarm.min.css';
 // import { Button, Cell } from 'zarm';
 import './assets/css/common.scss'
 import "lib-flexible";
+import {
+  Provider
+} from "react-redux";
+import store from "./store/index"
+import axios from 'axios'
+import filters from './filters/index'
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
@@ -21,7 +27,15 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
+// axios.interceptors.request.use(config=>{
+//   config.url = '/api'+config.url;
+//   return config
+// });
+axios.interceptors.response.use(({data})=>{
+  return data;
+})
+React.Component.prototype.$axios = axios;
+React.Component.prototype.$filters = filters;
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
