@@ -222,7 +222,7 @@ export class Mno_detail extends Component {
                         立即执行
                     </div>
                 </div>
-                <BtnGoHome></BtnGoHome>
+                <BtnGoHome {...this.props}></BtnGoHome>
             </div>
         )
     }

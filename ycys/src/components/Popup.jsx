@@ -12,7 +12,7 @@ class ActionSheet extends Component {
             },
             city: [],
             _: localStorage.city_code || 1588583613122,
-            city_code:''
+            city_code: ''
         }
     }
     toggle = (key) => {
@@ -29,7 +29,7 @@ class ActionSheet extends Component {
 
     }
     render() {
-        const { visible} = this.state;
+        const { visible } = this.state;
         return (
             <div>
                 <Cell
@@ -42,31 +42,31 @@ class ActionSheet extends Component {
                     visible={visible.popBottom}
                     direction="bottom"
                     mask={false}
-                    onMaskClick={ async() => {await this.toggle('popBottom') }}
+                    onMaskClick={async () => { await this.toggle('popBottom') }}
                     destroy={false}
                 >
                     <div className='popup-box-top'>
-                        <div  className={`${style.area_item} ${style.active_item}`}>全国城市</div>
-                       {this.state.city.map(v=>{
-                         return ( <div className={style.area_item} key={v.city_code} onClick={this.change_city_code.bind(this)}>{v.city_name}({v.master_count})</div>)
-                       })}
+                        <div className={`${style.area_item} ${style.active_item}`}>全国城市</div>
+                        {this.state.city.map(v => {
+                            return (<div className={style.area_item} key={v.city_code} onClick={this.change_city_code.bind(this)}>{v.city_name}({v.master_count})</div>)
+                        })}
                     </div>
                 </Popup>
             </div>
         );
     }
-    change_city_code(e){
-        this.state.visible.popBottom=false;
-        e.target.className=`${style.area_item} ${style.area_item}`
+    change_city_code(e) {
+        this.state.visible.popBottom = false;
+        e.target.className = `${style.area_item} ${style.area_item}`
         this.setState({
-            city_code:e.target.key
+            city_code: e.target.key
         })
     }
-   async componentDidMount(){
+    async componentDidMount() {
         const cityInfo = await Axios.get(`/minsu/coupon/index/city?_=${this.state._}`)
         console.log(cityInfo.data.data);
         this.setState({
-            city:cityInfo.data.data
+            city: cityInfo.data.data
         })
     }
 

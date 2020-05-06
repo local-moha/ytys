@@ -142,7 +142,7 @@ export class Home extends Component {
                                                     <div className={`${style.team_img} ${style.bg_img}`} style={{ backgroundImage: `url(${v.image_url_list.middle})` }}></div>
                                                     <div className={style.team_timebox}>
                                                         <div className={style.team_icon} style={{ background: "rgb(5,229,128)" }}></div>
-                                                        进行中 剩余{date(v.end_time / 1 - v.start_time / 1)}
+                                                        进行中 剩余{dateChoose(v.end_time / 1 - v.start_time / 1)}
                                                     </div>
                                                 </div>
                                                 {/* 怎么是透明的 */}
