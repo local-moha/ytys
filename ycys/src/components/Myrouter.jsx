@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+
 import {
     Route,
     Switch,
     Redirect
 } from 'react-router-dom'
-// import GuardRouter from './GuardRouter'
+import GuardRouter from './GuardRouter'
 class Myrouter extends Component {
     constructor(porps){
         super(porps);
@@ -15,7 +16,7 @@ class Myrouter extends Component {
            <Switch>
                {
                    this.props.router.map(v=>( 
-                       <Route key={v.path} exact={v.exact} path={v.path}  ></Route>
+                       <Route key={v.path} exact={v.exact} path={v.path} render={()=><GuardRouter {...v}></GuardRouter>} ></Route>
                    ))
                }
                 <Redirect to={'/error'} from='*'></Redirect>
