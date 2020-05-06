@@ -20,7 +20,7 @@ import axios from 'axios'
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Router>
+      <Router forceRefresh>
         <App />
       </Router>
     </Provider>

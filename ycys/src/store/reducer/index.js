@@ -4,7 +4,7 @@ import search from './search'
 import template from './getCoupon'
 import theme from './theme'
 import mno_detail from './mno_detail'
-// import stock from './stock_localtions/index'
+import stock from './stock_localtions/index'
 
 export default combineReducers({
     home,
@@ -12,5 +12,5 @@ export default combineReducers({
     template,
     theme,
     mno_detail,
-    // stock
+    stock
 })

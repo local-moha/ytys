@@ -44,8 +44,8 @@ class Distribution extends Component {
         const data = await axios.get(`/minsu/distribution/index/index?page=${this.state.page}&limit=20&_=${this.state.city_code}`)
         // console.log(data.data.data);
         this.setState({
-            distributionList: data.data.data.list,
-            page: data.data.data.pager.page
+            distributionList: data.data.list,
+            page: data.data.pager.page
         })
 
     }

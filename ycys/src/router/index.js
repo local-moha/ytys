@@ -7,7 +7,6 @@ import Search from '../view/Search'
 import GetCoupon from '../view/GetCoupon'
 import Theme from '../view/Theme'
 import Mno_detail from '../view/Mno_detail'
-// import Meisu from '../view/Minsu'
 import Error from '../view/Error'
 import Distribution from '../view/Distribution'
 import Detail from '../view/Detail'
@@ -30,7 +29,7 @@ export default [
             {
                 path: '/distribution/detail.html',
                 component: Detail,
-                // isAuthorization:true
+                isAuthorization: true
             }
         ]
     },
@@ -47,7 +46,7 @@ export default [
                 path: '/index/person.html',
                 component: Person,
                 exact: true,
-                // isAuthorization: true
+                isAuthorization: true
             },
         ]
     },

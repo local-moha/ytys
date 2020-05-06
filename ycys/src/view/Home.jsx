@@ -78,9 +78,12 @@ export class Home extends Component {
                     <div className={style.entry_w}>
                         <div className={`${style.entry} ${style.stock_entry}`} onClick={() => {
                             //跳转特价房券./meisu/stock_list.html
-                            // this.props.history.push("/meisu/stock_list.html")
+                            this.props.history.push("/meisu/stock_list.html")
                         }}>特价房券</div>
-                        <div className={`${style.entry} ${style.sale_entry}`}>限时抢购</div>
+                        <div className={`${style.entry} ${style.sale_entry}`} onClick={() => {
+                            //跳转特价房券./meisu/stock_list.html
+                            this.props.history.push("/distribution")
+                        }}>限时抢购</div>
                         <div className={`${style.entry} ${style.super_entry}`}>超值套餐</div>
                         <div className={`${style.entry} ${style.cutrpice_entry}`}>砍价服务</div>
                     </div>
