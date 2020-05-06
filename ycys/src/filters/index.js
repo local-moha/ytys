@@ -25,7 +25,7 @@ const lastDate =
         hours = checkTime(hours); 
         minutes = checkTime(minutes); 
         seconds = checkTime(seconds); 
-      return "剩余"+days+'天'+hours+'小时'+minutes+'分'
+      return days+'天'+hours+'小时'+minutes+'分'
     }
        function checkTime(i){ //将0-9的数字前面加上0，例1变为01 
         if(i<10) 

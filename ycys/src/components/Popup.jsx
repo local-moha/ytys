@@ -25,9 +25,7 @@ class ActionSheet extends Component {
         });
         // console.log(visible,this.state.visible);
     }
-    componentDidMount() {
 
-    }
     render() {
         const { visible} = this.state;
         return (

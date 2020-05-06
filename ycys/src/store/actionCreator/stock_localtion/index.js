@@ -6,7 +6,6 @@ export function upStock(payload){
         payload
     }
 }
-
 export  default{
     getStockList(pageNo=1){
         return async(dispatch)=>{
