@@ -42,7 +42,7 @@ export class Mno_detail extends Component {
                         <div className={style.rt_img} style={{
                             backgroundImage: `url(${v.image_master.small})`
                         }} ></div>
-                        <div className={style.rt_img_num}>{v.image_slave_list.length}</div>
+                        <div className={style.rt_img_num}>{v.image_slave.length + 1}</div>
                     </div>
                     <div className={style.rt_info}>
                         <div className={style.rt_name}>{v.name}</div>

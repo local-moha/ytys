@@ -18,43 +18,44 @@ export class Theme extends Component {
     render() {
         const { banner, destination } = this.props.theme.themeData;
         this.listInit = destination ? destination[0].list : []
-        // console.log(this);
+        console.log(this.props.theme);
         return (
-            <div className={style.page}>
-                <div className={style.top} style={{
-                    backgroundImage: `url(${banner ? banner.theme_image.big : ""})`
-                }}>
-                    <div className={`${style.dateselect} ${style.filter_time}`}>
-                        {/* 日期的公共组件 */}
-                        <Calender></Calender>
-                    </div>
-                </div>
-                <div className={`${style.city_list} ${style.navlist}`}>
-                    {
-                        destination ? destination.map((item, index) => (
-                            <div key={index} className={`${style.city_li} ${this.state.active === index ? style.active : ""}`} onClick={() => {
-                                this.setState({
-                                    active: index,
-                                    listActive: item.list
-                                })
-                            }}>
-                                {
-                                    item.destination_name
-                                }
-                            </div>
-                        )) : ""
-                    }
-                </div>
-                <div className={"content"}>
-                    {
-                        this.state.listActive.length > 0 ? this.showContent(this.state.listActive) : this.showContent(this.listInit)
-                    }
+            <div></div>
+            // <div className={style.page}>
+            //     <div className={style.top} style={{
+            //         backgroundImage: `url(${banner ? banner.theme_image.big : ""})`
+            //     }}>
+            //         <div className={`${style.dateselect} ${style.filter_time}`}>
+            //             {/* 日期的公共组件 */}
+            //             <Calender></Calender>
+            //         </div>
+            //     </div>
+            //     <div className={`${style.city_list} ${style.navlist}`}>
+            //         {
+            //             destination ? destination.map((item, index) => (
+            //                 <div key={index} className={`${style.city_li} ${this.state.active === index ? style.active : ""}`} onClick={() => {
+            //                     this.setState({
+            //                         active: index,
+            //                         listActive: item.list
+            //                     })
+            //                 }}>
+            //                     {
+            //                         item.destination_name
+            //                     }
+            //                 </div>
+            //             )) : ""
+            //         }
+            //     </div>
+            //     <div className={"content"}>
+            //         {
+            //             this.state.listActive.length > 0 ? this.showContent(this.state.listActive) : this.showContent(this.listInit)
+            //         }
 
-                </div>
-                <BtnGoHome {...this.props}></BtnGoHome>
-                {/* 吸顶的 */}
-                {/* <div className={style}></div> */}
-            </div>
+            //     </div>
+            //     <BtnGoHome {...this.props}></BtnGoHome>
+            //     {/* 吸顶的 */}
+            //     {/* <div className={style}></div> */}
+            // </div>
         )
     }
     showContent(hotelList) {
