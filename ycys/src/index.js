@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+// import axios from "axios";
 import * as serviceWorker from './serviceWorker';
 import {
   BrowserRouter as Router
 } from "react-router-dom";
 import 'zarm/dist/zarm.min.css';
-import { Button, Cell } from 'zarm';
+// import { Button, Cell } from 'zarm';
 import './assets/css/index.scss'
 import "lib-flexible";
 ReactDOM.render(

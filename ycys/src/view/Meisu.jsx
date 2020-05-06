@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import Myrouter from '../components/Myrouter'
-export default class Minsu extends Component {
+export default class Meisu extends Component {
     render() {
         return (
             <div>    
-                <Myrouter router={this.props.childrens} forceRefresh={true}></Myrouter>     
+                <Myrouter router={this.props.childrens}></Myrouter>     
             </div>
         )
         console.log(333,this.props)

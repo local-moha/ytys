@@ -1,0 +1,42 @@
+.nav_list {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    overflow: hidden;
+    height: 98px;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid hsla(0, 0%, 60%, 0.3);
+    /* color: #999; */
+    font-size: 24px;
+}
+
+.nav_item_active {
+    color: #ff4f54;
+    background: #ff4f54;
+}
+
+.nav_item {
+    text-align: center;
+    float: left;
+    width: 25%;
+    padding-top: 60px;
+    color: #999999;
+}
+
+.nav_item_home {
+    background: url("../img/nav1.png") no-repeat center 5px/60px 60px;
+}
+
+.nav_item_hotel {
+    background: url("../img/nav2.png") no-repeat center 5px/60px 60px;
+}
+
+.nav_item_service {
+    background: url("../img/nav3.png") no-repeat center 5px/60px 60px;
+}
+
+.nav_item_account {
+    background: url("../img/nav4.png") no-repeat center 5px/60px 60px;
+}

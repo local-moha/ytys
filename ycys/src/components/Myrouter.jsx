@@ -17,13 +17,15 @@ class Myrouter extends Component {
                    this.props.router.map(v=>( 
                        <Route key={v.path} exact={v.exact} path={v.path} render={()=><GuardRouter {...v}></GuardRouter>} ></Route>
                    ))
-               }
-                <Redirect to={'/error'} from='*'></Redirect>
+                }
+                {/* <Redirect to={'/minsu/index.html'} from='/'></Redirect>
+                <Redirect to={'/error'} from='*'></Redirect> */}
            </Switch>   
+           
         );
     }
     componentWillMount(){
-        console.log(this.props.router);
+        console.log(111,this.props);
         
     }
 }

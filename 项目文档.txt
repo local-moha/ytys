@@ -9,6 +9,20 @@ git：https://github.com/local-moha/ytys
 胡静：
 从git上克隆下自己的分支
 创建自己的任务页面
-搭建结构和样式
-调取接口
+搭建Superhotel_home.jsx的结构和样式
+setupProxy.js代理，用aioxs调取接口
+5.2
+完善Superhotel_home.jsx的功能
+1.完成酒店列表
+2.完成城市列表
+5.3
+搭建superhotel_detail.jsx的结构和样式
+调取该页面所需的数据
+从Superhotel_home.jsx页面的酒店列表点击进入superhotel_detail.jsx详情页，传入mno参数
+根据传过来的mno调用详情的酒店数据，
+5.4
+完成详情酒店中的房型列表，
+搭建superhotel_detail.jsx的结构和样式
+5.5
+停电一天
     
