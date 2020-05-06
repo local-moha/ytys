@@ -7,25 +7,26 @@ import {
 } from 'react-router-dom'
 import GuardRouter from './GuardRouter'
 class Myrouter extends Component {
-    constructor(porps){
+    constructor(porps) {
         super(porps);
-        this.state={}
+        this.state = {}
     }
     render() {
         return (
-           <Switch>
-               {
-                   this.props.router.map(v=>( 
-                       <Route key={v.path} exact={v.exact} path={v.path} render={()=><GuardRouter {...v}></GuardRouter>} ></Route>
-                   ))
-               }
+            <Switch>
+                {
+                    this.props.router.map(v => (
+                        <Route key={v.path} exact={v.exact} path={v.path} render={() => <GuardRouter {...v}></GuardRouter>} ></Route>
+                    ))
+                }
+                <Redirect to={'/index/index.html'} from='/'></Redirect>
                 <Redirect to={'/error'} from='*'></Redirect>
-           </Switch>   
+            </Switch>
         );
     }
-    componentWillMount(){
+    componentWillMount() {
         console.log(this.props.router);
-        
+
     }
 }
 

@@ -1,0 +1,6 @@
+export default {
+    GET_THEME: "GET_THEME",
+    GET_SUPER: "GET_SUPER",
+    GET_CITY: "GET_CITY",
+    GET_CAROUSEL: "GET_CAROUSEL"
+}

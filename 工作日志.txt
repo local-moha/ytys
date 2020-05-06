@@ -1,0 +1,44 @@
+﻿组长：付杰
+组员：万为明、成梦婷、胡静
+项目：wechat.yitianyishu.com/minsu/index.html
+UI库：https://zarm.gitee.io/#/components/quick-start
+使用框架：react
+git：https://github.com/local-moha/ytys
+****************************5.1***********************************************
+万为明：
+    完成首页面布局+样式
+    调用数据时 404 跨域没问题 估计是网站限制了
+    官网：{"code":"0","message":"success","timestamp":null,"sign":null,"nonce":null,"data":...}
+    调用：{"code":"3000","message":"error","timestamp":null,"sign":null,"nonce":null,"data":404}
+****************************5.2***********************************************
+万为明：
+    排除数据bug。代理语法错误。。。  
+    redux架构搭建
+    首页数据渲染完成(react-redux)
+    封装轮播组件
+    底部导航写了个假的 图标的图片已经存入静态资源中
+    bug：
+        1.多行文本换行省略的bug 网上的教程都试过 没用。。
+        2.superList获取成功后 渲染时 在控制台有数据 但是页面中初次能渲染 刷新数据渲染不了 控制台Element中都是有数据的  
+    解决bug：
+        1.解决[Intervention] Unable to preventDefault inside passive event listener due to target being treated as passive. See URL报错 
+        bug是UI库的轮播组件的滑动切换报错
+        https://www.fxyh97.com/index.php/archives/173/
+****************************5.3***********************************************
+万为明：
+    1.完成search.html 
+        实现功能： 通过redux获取数据并渲染数据 与首页面的交互 基本功能
+    2.完成getCoupon.html
+        实现功能： 通过redux获取数据并渲染数据 完成基本功能
+****************************5.4***********************************************
+万为明：
+    1.完成主题页 theme.html
+    2.封装回到首页公共组件 BtnGoHome.jsx
+    3.封装底部导航公共组件 MyNav.jsx
+    4.封装地址栏传参截取参数的方法 filters/index.js-->getThemeId()
+    5.封装一系列日期有关的过滤器
+    6.封装日期选择器公共组件 CalenderJsx.jsx
+****************************5.5***********************************************
+万为明：
+    1.修复了日期选择器组件的小bug
+    2.mno_detail页面：获取数据 布局+样式 渲染一部分数据

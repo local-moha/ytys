@@ -1,0 +1,4 @@
+export default {
+    GET_HOT_WORD: "GET_HOT_WORD",
+    GET_SUGGESTION: "GET_SUGGESTION"
+}
