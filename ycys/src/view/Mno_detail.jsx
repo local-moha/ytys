@@ -25,6 +25,7 @@ export class Mno_detail extends Component {
             </div>
         )
     }
+    //房型
     setRoom(roomList) {
         let roomTitleInfo = <div></div>
         let roomListInfo = <div></div>
@@ -55,8 +56,6 @@ export class Mno_detail extends Component {
                 </div>
             ))
         }
-
-
         return (
             <div id={style.roomtype}>
                 {roomTitleInfo}
@@ -68,16 +67,61 @@ export class Mno_detail extends Component {
             </div>
         )
     }
+    //房客评论
+    setComment(commentData) {
+        // console.log(commentData);
+        let commentTitleInfo = <div></div>;
+        let commentListInfo = <div></div>;
+        if (commentData.list) {
+            const { list, pager } = commentData;
+            commentTitleInfo = (
+                <div className={style.comment_top}>
+                    <div className={style.comment_tit}>房客评论</div>
+                    <div className={style.comment_num}>{`(${pager.totalCount}条评论)`}</div>
+                    <div className={style.comment_more}>MORE></div>
+                </div>
+            )
+            commentListInfo = (
+                <div className={style.comment_item}>
+                    <div className={style.cc_top}>
+                        {/* <img src="" alt="" className={style.cc_avatar} /> */}
+                        <div className={style.cc_avatar}></div>
+                        <div className={style.cc_name}>{list[0].nick}</div>
+                        <div className={style.cc_date}>{list[0].start_date}</div>
+                        <div className={style.cc_mnoname}>{`入住${list[0].subtitle}`}</div>
+                    </div>
+                    <div className={"cc_conent"}>
+                        <div className={style.cc_word_out}>
+                            <div className={"cc_word_in"} >{list[0].content}</div>
+                            <div className={style._wordshowbtn}></div>
+                        </div>
+                        <div className={style.cc_imglist}>
+                            {
+                                list[0].image_detail_list.map((v, i) => (
+                                    <div key={i} className={style.cc_img} style={{
+                                        backgroundImage: `url(${v.small})`
+                                    }}></div>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+        return (
+            <div id={style.comment}>
+                {commentTitleInfo}
+                {commentListInfo}
+            </div>
+        )
+    }
     render() {
         const { commentData, roomList, masterData, relateData } = this.props.mno_detail
-        console.log(masterData);
         return (
             <div className={style.page}>
                 <div className={style.container_top}>
-                    {
-                        /* 轮播图 */
-                        this.setSwiper(masterData)
-                    }
+                    {/* 轮播图 */}
+                    {this.setSwiper(masterData)}
                     <div className={style.mno_intr}>
                         <div className={style.mno_tit_w}>
                             <div className={style.mno_tit}></div>
@@ -105,67 +149,27 @@ export class Mno_detail extends Component {
                     <Calender></Calender>
                 </div>
                 {/* 客房列表 */}
-                {
-                    this.setRoom(roomList)
-                }
-                {/* <div id={style.roomtype}>
-                    <div className={style.rt_top}>
-                        <div className={style.rt_tit}>房型</div>
-                        <div className={style.rt_num}></div>
-                    </div>
-                    <div className={style.rt_list}>
-                        <div className={style.rt_item}>
-                            <div className={style.rt_img_w}>
-                                <div className={style.rt_img}></div>
-                                <div className={style.rt_img_num}></div>
-                            </div>
-                            <div className={style.rt_info}>
-                                <div className={style.rt_name}></div>
-                                <div className={style.rt_food}></div>
-                                <div className={style.rt_area}></div>
-                                <div className={style.rt_bed}></div>
-                                <div className={style.rt_people}></div>
-                                <div className={style.rt_price}></div>
-                                <div className={style.rt_order_btn}></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={style.rt_showall}></div>
-                    <div className={style.rt_hide}></div>
-                </div> */}
+                {this.setRoom(roomList)}
                 {/* 房客评论 */}
-                <div id={style.comment}>
-                    <div className={style.comment_top}>
-                        <div className={style.comment_tit}></div>
-                        <div className={style.comment_num}></div>
-                        <div className={style.comment_more}></div>
-                    </div>
-                    <div className={style.comment_item}>
-                        <div className={style.cc_top}>
-                            <img src="" alt="" className={style.cc_avatar} />
-                            <div className={style.cc_name}></div>
-                            <div className={style.cc_date}></div>
-                            <div className={style.cc_mnoname}></div>
-                        </div>
-                        <div className={"cc_conent"}>
-                            <div className={style.cc_word_out}>
-                                <div className={"cc_word_in"}></div>
-                                <div className={style._wordshowbtn}></div>
-                            </div>
-                            <div className={style.cc_imglist}></div>
-                        </div>
-                    </div>
-                </div>
+                {this.setComment(commentData)}
                 <div id={style.location}>
                     <div className={style.location_top}>
-                        <div className={`${style.title} ${style.fl}`}></div>
-                        <div className={style.more}>MORE</div>
+                        <div className={`${style.title} ${style.fl}`}>位置</div>
+                        <div className={style.more}>MORE></div>
                     </div>
-                    <div className={style.location_address}></div>
-                    <div className={style.map_w}>
-                        <img src="" alt="" id={style.map} />
-                    </div>
+                    {
+                        masterData.mno ? (
+                            <>
+                                <div className={style.location_address}>{masterData.location}</div>
+                                <div className={style.map_w}>
+                                    <img src={`https://apis.map.qq.com/ws/staticmap/v2/?center=${masterData.latitude},${masterData.longitude}&scale=2&zoom=13&size=335*128&maptype=roadmap&markers=size:large|color:0xFFCCFF|label:k|${masterData.latitude},${masterData.longitude}&key=SYVBZ-DL5WS-S2TOZ-6FX6F-5B7CJ-LRF4X`} alt="" id={style.map} />
+                                </div>
+                            </>
+                        ) : (<></>)
+                    }
+
                 </div>
+                {/* 入住须知 购买须知 退改规则 */}
                 <div className={style.needknow}>
                     <div className={style.title}>入住须知</div>
                     <div className={style.nk_con}>

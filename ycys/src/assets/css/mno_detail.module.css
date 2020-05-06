@@ -4,6 +4,7 @@
     height: auto;
     overflow-y: auto;
     overflow-x: hidden;
+    font-size: 28px;
 }
 .container_top{
     overflow: hidden;
@@ -240,6 +241,7 @@
     box-shadow: 6px 6px 24px 0 rgba(0,0,0,.12);
     border-radius: 16px;
     padding: 30px 40px 56px;
+    font-size: 28px;
 }
 .cc_top{
     overflow: hidden;
@@ -250,11 +252,13 @@
 .cc_avatar, .cc_name {
     float: left;
     margin-right: 16px;
+    
 }
 .cc_avatar{
     width: 48px;
     height: 48px;
     border-radius: 48px;
+    background: url("https://img.yitianyishu.com/18-3-2/93471053.jpg") no-repeat  0 0/48px;;
 }
 .cc_name{
     color: #222;
@@ -285,6 +289,18 @@
 }
 .cc_imglist{
     overflow: hidden;
+}
+.cc_img {
+    float: left;
+    width: 180px;
+    height: 180px;
+    margin: 20px 20px 0 0;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: 0 0;
+}
+.cc_img:nth-child(3n) {
+    margin-right: 0;
 }
 #location{
     background: #fff;
@@ -424,6 +440,7 @@
     line-height: 40px;
     color: #999;
     text-align: center;
+    font-size: 28px;
     padding: 20px 0;
 }
 ._end_icon{
@@ -431,7 +448,7 @@
     width: 18px;
     height: 18px;
     margin: 0 6px;
-    background: url("../img/mno_detail5.png") no-repeat 0 0/18rem 18px;
+    background: url("../img/mno_detail5.png") no-repeat 0 0/18px 18px;
 }
 .c_footer{
     width: 100%;

@@ -46,12 +46,7 @@ const date2Data = (str) => {
     str = str.replace(/-/g, '');
     return str
 }
-// const concatSwiper = (list1, list2) => {
-//     const arr = list1.concat(list2)
-//     return arr
-// }
-// console.log(concatSwiper([1, 2, 3], [4, 5, 6]));
-// console.log([...[1, 2, 3], ...[4, 5, 6]]);
+
 
 export {
     date,
