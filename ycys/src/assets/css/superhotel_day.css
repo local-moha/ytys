@@ -162,12 +162,12 @@ body[data-v-e21570da] {
     float: left;
     margin: 24px 20px 0 0;
     width: 160px;
-    height: .32rem;
-    line-height: .32rem;
+    height: 64px;
+    line-height: 64px;
     background: #e2e2e2;
     border-radius: 32px;
     text-align: center;
-    font-size: .15rem;
+    font-size: 30px;
     color: #666
 }
 
@@ -251,7 +251,8 @@ body[data-v-e21570da] {
     font-size: 24px;
     color: #666;
     position: relative;
-    line-height: 44px
+    line-height: 44px;
+    text-decoration:line-through;
 }
 
 .price-high[data-v-e21570da]:after {

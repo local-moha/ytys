@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import order from '../assets/img/order.png';
+import nav3 from '../assets/img/nav3.png';
 export default class Superhotel_detail extends Component {
     constructor(props){
         super(props)
@@ -42,7 +44,7 @@ export default class Superhotel_detail extends Component {
     }
     render() {
         return (
-            <div data-v-0df0ec45="" className="page" style={{display: "block"}}>
+            <div data-v-0df0ec45="" className="page" style={{display: "block",fontSize: "14px"}}>
                 <div data-v-0df0ec45="" className="top-img">
                     {this.state.det1.map(v=>(
                         <div key={v.des} data-v-0df0ec45="" className="img-public lazy-img" data-src={v.image} lazy="loaded" style={{backgroundImage:`url(${v.image})`}}>
@@ -115,12 +117,12 @@ export default class Superhotel_detail extends Component {
                             <div data-v-0139f77a="" className="c-footer__collectIcon c-footer__collect__unactive"></div>
                             <div data-v-0139f77a="" className="c-footer__collectNum" style={{display:"none"}}></div>
                         </div>
-                        <div data-v-0139f77a="" className="c-footer__myorder">
-                            <img data-v-0139f77a="" src="../assets/img/order.png" className="c-footer__myorderIcon" />
+                        <div data-v-0139f77a="" className="c-footer__myorder" onClick={()=>{this.props.history.push({pathname:"/meisu/orderlist.html"})}}>
+                            <img data-v-0139f77a="" src={order} className="c-footer__myorderIcon" />
                             <div data-v-0139f77a="" className="c-footer__myorderWord">订单</div>
                         </div>
                         <div data-v-0139f77a="" className="c-footer__server">
-                            <img data-v-0139f77a="" src="../assets/img/nav3.png" className="c-footer__serverIcon" />
+                            <img data-v-0139f77a="" src={nav3} className="c-footer__serverIcon" />
                             <div data-v-0139f77a="" className="c-footer__serverWord" onClick={this.showhide1.bind(this)}>客服</div>
                         </div>
                         <div data-v-0139f77a="" className="c-footer__orderbtn">立即预订</div>
@@ -162,7 +164,9 @@ export default class Superhotel_detail extends Component {
                             <div data-v-0df0ec45="" id="room-swipe">
                                 <div data-v-0df0ec45="" className="mint-swipe room-swipe">
                                     <div className="mint-swipe-items-wrap">
-                                        <div data-v-0df0ec45="" className="mint-swipe-item" style={{}}><div data-v-0df0ec45="" className="slide-image lazy-img" data-src={this.state.data.image_master} lazy="loaded" style={{backgroundImage: `url(&quot;${this.state.data.image_master}&quot;)`}}></div></div>
+                                        <div data-v-0df0ec45="" className="mint-swipe-item" style={{}}>
+                                            <div data-v-0df0ec45="" className="slide-image lazy-img" data-src={this.state.data.image_master} lazy="loaded" style={{backgroundImage: `url(${this.state.data.image_master})`}}></div>
+                                        </div>
                                     </div> 
                                     <div className="mint-swipe-indicators" style={{display: "none"}}></div>
                                 </div>
@@ -183,7 +187,65 @@ export default class Superhotel_detail extends Component {
                     </div>
                 </div>
                 {/* <div data-v-0df0ec45="" class="pictureSwipe">
-                    <div itemscope="itemscope" itemtype="http://schema.org/ImageGallery" class="my-gallery" data-pswp-uid="1"><figure itemprop="associatedMedia" itemscope="itemscope" itemtype="http://schema.org/ImageObject" src="https://img.yitianyishu.com/image_out/20181222/5a2ba942a0d3bd9b624f28841d7e4054-750_480.jpg"><a href="https://img.yitianyishu.com/image_out/20181222/5a2ba942a0d3bd9b624f28841d7e4054-750_480.jpg" itemprop="contentUrl" data-size="750x480"><img src="https://img.yitianyishu.com/image_out/20181222/5a2ba942a0d3bd9b624f28841d7e4054-220_220.jpg" itemprop="thumbnail" alt="杭州武林万怡酒店外景图"></a></figure><figure itemprop="associatedMedia" itemscope="itemscope" itemtype="http://schema.org/ImageObject" src="https://img.yitianyishu.com/image_out/20181222/7dcd2f06079de7f06a568256407e3535-750_480.jpg"><a href="https://img.yitianyishu.com/image_out/20181222/7dcd2f06079de7f06a568256407e3535-750_480.jpg" itemprop="contentUrl" data-size="750x480"><img src="https://img.yitianyishu.com/image_out/20181222/7dcd2f06079de7f06a568256407e3535-220_220.jpg" itemprop="thumbnail" alt="杭州武林万怡酒店外景图"></a></figure><figure itemprop="associatedMedia" itemscope="itemscope" itemtype="http://schema.org/ImageObject" src="https://img.yitianyishu.com/image_out/20181222/092d4cb8977063ba92d7eb970250f0c5-750_480.jpg"><a href="https://img.yitianyishu.com/image_out/20181222/092d4cb8977063ba92d7eb970250f0c5-750_480.jpg" itemprop="contentUrl" data-size="750x480"><img src="https://img.yitianyishu.com/image_out/20181222/092d4cb8977063ba92d7eb970250f0c5-220_220.jpg" itemprop="thumbnail" alt="杭州武林万怡酒店外景图"></a></figure><figure itemprop="associatedMedia" itemscope="itemscope" itemtype="http://schema.org/ImageObject" src="https://img.yitianyishu.com/image_out/20181222/40bd7cf92029bf0b44dc9f7a32cf3d95-750_480.jpg"><a href="https://img.yitianyishu.com/image_out/20181222/40bd7cf92029bf0b44dc9f7a32cf3d95-750_480.jpg" itemprop="contentUrl" data-size="750x480"><img src="https://img.yitianyishu.com/image_out/20181222/40bd7cf92029bf0b44dc9f7a32cf3d95-220_220.jpg" itemprop="thumbnail" alt="杭州武林万怡酒店外景图"></a></figure></div><div tabindex="-1" role="dialog" aria-hidden="false" class="pswp pswp--open pswp--notouch pswp--css_animation pswp--svg pswp--zoom-allowed pswp--visible pswp--animated-in" style="position: fixed; opacity: 1;"><div class="pswp__bg" style="opacity: 1;"></div><div class="pswp__scroll-wrap"><div class="pswp__container" style="transform: translate3d(0px, 0px, 0px);"><div class="pswp__item" style="display: block; transform: translate3d(-420px, 0px, 0px);"><div class="pswp__zoom-wrap" style="transform: translate3d(0px, 214px, 0px) scale(1);"><img class="pswp__img" src="https://img.yitianyishu.com/image_out/20181222/40bd7cf92029bf0b44dc9f7a32cf3d95-750_480.jpg" style="opacity: 1; width: 375px; height: 240px;"></div></div><div class="pswp__item" style="transform: translate3d(0px, 0px, 0px);"><div class="pswp__zoom-wrap" style="transform: translate3d(0px, 214px, 0px) scale(1);"><div class="pswp__img pswp__img--placeholder pswp__img--placeholder--blank" style="width: 375px; height: 240px; display: none;"></div><img class="pswp__img" src="https://img.yitianyishu.com/image_out/20181222/5a2ba942a0d3bd9b624f28841d7e4054-750_480.jpg" style="display: block; width: 375px; height: 240px;"></div></div><div class="pswp__item" style="display: block; transform: translate3d(420px, 0px, 0px);"><div class="pswp__zoom-wrap" style="transform: translate3d(0px, 214px, 0px) scale(1);"><img class="pswp__img" src="https://img.yitianyishu.com/image_out/20181222/7dcd2f06079de7f06a568256407e3535-750_480.jpg" style="opacity: 1; width: 375px; height: 240px;"></div></div></div><div class="pswp__ui pswp__ui--fit"><div class="pswp__top-bar"><div class="pswp__counter">1 / 4</div><button title="Close (Esc)" class="pswp__button pswp__button--close"></button><span class="rotation-wrapper"><!----><!----></span><button title="Share" class="pswp__button pswp__button--share pswp__element--disabled"></button><button title="Toggle fullscreen" class="pswp__button pswp__button--fs pswp__element--disabled"></button><button title="Zoom in/out" class="pswp__button pswp__button--zoom"></button><div class="pswp__preloader"><div class="pswp__preloader__icn"><div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap pswp__element--disabled"><div class="pswp__share-tooltip"></div></div><button title="Previous (arrow left)" class="pswp__button pswp__button--arrow--left"></button><button title="Next (arrow right)" class="pswp__button pswp__button--arrow--right"></button><div class="pswp__caption pswp__caption--fake"><div class="pswp__caption__center"></div></div><div class="pswp__caption pswp__caption--empty"><div class="pswp__caption__center"></div></div></div></div></div></div> */}
+                    <div itemscope="itemscope" itemtype="http://schema.org/ImageGallery" class="my-gallery" data-pswp-uid="1">
+                        <figure itemprop="associatedMedia" itemscope="itemscope" itemtype="http://schema.org/ImageObject" src="https://img.yitianyishu.com/image_out/20181222/5a2ba942a0d3bd9b624f28841d7e4054-750_480.jpg">
+                            <a href="https://img.yitianyishu.com/image_out/20181222/5a2ba942a0d3bd9b624f28841d7e4054-750_480.jpg" itemprop="contentUrl" data-size="750x480">
+                                <img src="https://img.yitianyishu.com/image_out/20181222/5a2ba942a0d3bd9b624f28841d7e4054-220_220.jpg" itemprop="thumbnail" alt="杭州武林万怡酒店外景图" />
+                            </a>                            
+                        </figure>
+                    </div>
+                    <div tabindex="-1" role="dialog" aria-hidden="false" class="pswp pswp--open pswp--notouch pswp--css_animation pswp--svg pswp--zoom-allowed pswp--visible pswp--animated-in" style="position: fixed; opacity: 1;">
+                        <div class="pswp__bg" style="opacity: 1;"></div>
+                        <div class="pswp__scroll-wrap">
+                            <div class="pswp__container" style="transform: translate3d(0px, 0px, 0px);">
+                                <div class="pswp__item" style="display: block; transform: translate3d(-420px, 0px, 0px);">
+                                    <div class="pswp__zoom-wrap" style="transform: translate3d(0px, 214px, 0px) scale(1);">
+                                        <img class="pswp__img" src="https://img.yitianyishu.com/image_out/20181222/40bd7cf92029bf0b44dc9f7a32cf3d95-750_480.jpg" style="opacity: 1; width: 375px; height: 240px;" />
+                                    </div>
+                                </div>
+                                <div class="pswp__item" style="transform: translate3d(0px, 0px, 0px);">
+                                    <div class="pswp__zoom-wrap" style="transform: translate3d(0px, 214px, 0px) scale(1);">
+                                        <div class="pswp__img pswp__img--placeholder pswp__img--placeholder--blank" style="width: 375px; height: 240px; display: none;"></div>
+                                        <img class="pswp__img" src="https://img.yitianyishu.com/image_out/20181222/5a2ba942a0d3bd9b624f28841d7e4054-750_480.jpg" style="display: block; width: 375px; height: 240px;" />
+                                    </div>
+                                </div>
+                                <div class="pswp__item" style="display: block; transform: translate3d(420px, 0px, 0px);">
+                                    <div class="pswp__zoom-wrap" style="transform: translate3d(0px, 214px, 0px) scale(1);">
+                                        <img class="pswp__img" src="https://img.yitianyishu.com/image_out/20181222/7dcd2f06079de7f06a568256407e3535-750_480.jpg" style="opacity: 1; width: 375px; height: 240px;" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pswp__ui pswp__ui--fit">
+                                <div class="pswp__top-bar">
+                                    <div class="pswp__counter">1 / 4</div>
+                                    <button title="Close (Esc)" class="pswp__button pswp__button--close"></button>
+                                    <span class="rotation-wrapper"></span>
+                                    <button title="Share" class="pswp__button pswp__button--share pswp__element--disabled"></button>
+                                    <button title="Toggle fullscreen" class="pswp__button pswp__button--fs pswp__element--disabled"></button>
+                                    <button title="Zoom in/out" class="pswp__button pswp__button--zoom"></button>
+                                    <div class="pswp__preloader">
+                                        <div class="pswp__preloader__icn">
+                                            <div class="pswp__preloader__cut">
+                                                <div class="pswp__preloader__donut"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap pswp__element--disabled">
+                                    <div class="pswp__share-tooltip"></div>
+                                </div>
+                                <button title="Previous (arrow left)" class="pswp__button pswp__button--arrow--left"></button>
+                                <button title="Next (arrow right)" class="pswp__button pswp__button--arrow--right"></button>
+                                <div class="pswp__caption pswp__caption--fake">
+                                    <div class="pswp__caption__center"></div>
+                                </div>
+                                <div class="pswp__caption pswp__caption--empty">
+                                    <div class="pswp__caption__center"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> */}
             </div>
         )
     }

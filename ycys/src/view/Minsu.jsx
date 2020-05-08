@@ -4,7 +4,7 @@ export default class Minsu extends Component {
     render() {
         return (
             <div>    
-                <Myrouter router={this.props.childrens} forceRefresh={true}></Myrouter>     
+                <Myrouter router={this.props.childrens}></Myrouter>     
             </div>
         )
         console.log(333,this.props)

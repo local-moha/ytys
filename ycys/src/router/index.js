@@ -3,7 +3,9 @@ import Minsu from '../view/Minsu';
 import Meisu from '../view/Meisu';
 import Superhotel_home from "../view/Superhotel_home";
 import Superhotel_day from "../view/Superhotel_day";
-import Super_detail from "../view/superhotel_detail";
+import Super_detail from "../view/Superhotel_detail";
+import Mno_detail from "../view/Mno_detail";
+import Orderlist from '../view/Orderlist'
 
 export default [{
         path: '/login',
@@ -90,10 +92,10 @@ export default [{
             //             path:'/meisu/mno_list.html',
             //             component:Mno_list.html
             //         },
-            //         {
-            //             path:'/meisu/Mno_detail.html',
-            //             component:Theme
-            //         },
+            {
+                path:'/meisu/mno_detail.html',
+                component: Mno_detail
+            },
             {
                 path: '/meisu/superhotel_day.html',
                 component: Superhotel_day
@@ -102,10 +104,10 @@ export default [{
             //             path:'/meisu/superhotel_detail.html',
             //             component:Superhotel_detail
             //         },
-            //         {
-            //             path:'/meisu/order_list.html',
-            //             component:Order_list
-            //         },
+            {
+                path:'/meisu/orderlist.html',
+                component:Orderlist
+            },
             //         {
             //             path:'/meisu/cutprice_orderlist.html',
             //             component:Cutprice_orderlist
@@ -135,10 +137,6 @@ export default [{
             //         {
             //             path:'/meisu/superhotel_detail.html',
             //             component:Superhotel_detail
-            //         },
-            //         {
-            //             path:'/meisu/order_list.html',
-            //             component:Order_list
             //         },
             //         {
             //             path:'/meisu/cutprice_orderlist.html',

@@ -11,7 +11,7 @@ export default class Nav extends Component {
                     <NavLink to={""} className={`${style.nav_item_home} ${style.nav_item}`} activeClassName={style.nav_item_active } to={""}>
                         <span>美宿</span>
                     </NavLink>
-                    <NavLink className={`${style.nav_item_hotel} ${style.nav_item}`} activeClassName={style.nav_item_active } to={"/superhotel_home.html"} exact >
+                    <NavLink className={`${style.nav_item_hotel} ${style.nav_item}`} activeClassName={style.nav_item_active } to={"/index/superhotel_home.html"} exact >
                         <span>酒店</span>
                     </NavLink>
                     <NavLink to={""} className={`${style.nav_item_service} ${style.nav_item}`} activeClassName={style.nav_item_active } to={""}>

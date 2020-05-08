@@ -129,7 +129,4 @@ export default class Superhotel_home extends Component {
         this.cityList();
         this.specialOffer();
     }
-    // routerTo(v) {
-    //     this.props.history.push({pathname: `/meisu/super_detail.html?mon=${v.mno}`, state: {data: v}})
-    // }
 }

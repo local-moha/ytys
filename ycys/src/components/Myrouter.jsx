@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
     Route,
     Switch,
-    Redirect
+    Redirect,
+    BrowserRouter as Router
 } from 'react-router-dom'
 import GuardRouter from './GuardRouter'
 class Myrouter extends Component {
@@ -12,15 +13,17 @@ class Myrouter extends Component {
     }
     render() {
         return (
-           <Switch>
-               {
-                   this.props.router.map(v=>( 
-                       <Route key={v.path} exact={v.exact} path={v.path} render={()=><GuardRouter {...v}></GuardRouter>} ></Route>
-                   ))
-                }
-                {/* <Redirect to={'/minsu/index.html'} from='/'></Redirect>
-                <Redirect to={'/error'} from='*'></Redirect> */}
-           </Switch>   
+            <Router forceRefresh={true}>
+                <Switch>
+                    {
+                        this.props.router.map(v=>( 
+                            <Route key={v.path} exact={v.exact} path={v.path} render={()=><GuardRouter {...v}></GuardRouter>}></Route>
+                        ))
+                    }
+                    {/* <Redirect to={'/minsu/index.html'} from='/'></Redirect>
+                    <Redirect to={'/error'} from='*'></Redirect> */}
+                </Switch> 
+           </Router> 
            
         );
     }
