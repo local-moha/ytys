@@ -1,33 +1,50 @@
-import Login from '../view/Login';
-import Minsu from '../view/Minsu';
-import Meisu from '../view/Meisu';
+import Login from '../view/Login'
+import Index from '../view/Index'
+import Home from '../view/Home'
 import Superhotel_home from "../view/Superhotel_home";
 import Superhotel_day from "../view/Superhotel_day";
 import Super_detail from "../view/Superhotel_detail";
-import Mno_detail from "../view/Mno_detail";
+import Person from '../view/Person'
+import Meisu from '../view/Meisu'
+import Search from '../view/Search'
+import GetCoupon from '../view/GetCoupon'
+import Theme from '../view/Theme'
+import Mno_detail from '../view/Mno_detail'
+import Error from '../view/Error'
+import Distribution from '../view/Distribution'
+import Detail from '../view/Detail'
 import Orderlist from '../view/Orderlist'
-
-export default [{
+import DistributionIndex from '../view/DistributionIndex'
+import Stock_list from '../view/Stock_list'
+export default [
+    {
         path: '/login',
-        exact: true,
         component: Login
     },
-    // {
-    //     path:'/distribution',
-    //     component:Distribution
-    // },
-    // {
-    //     path:'/error',
-    //     component:Error
-    // },
+    {
+        path: '/distribution',
+        component: DistributionIndex,
+        childrens: [
+            {
+                path: '/distribution',
+                component: Distribution,
+                exact: true
+            },
+            {
+                path: '/distribution/detail.html',
+                component: Detail,
+                isAuthorization: true
+            }
+        ]
+    },
     {
         path: '/index',
-        component: Minsu,
+        component: Index,
         childrens: [
-            // {
-            //     path:'/Home',
-            //     component:Home
-            // },
+            {
+                path: '/index/index.html',
+                component: Home
+            },
             {
                 path: '/index/superhotel_home.html',
                 component: Superhotel_home,
@@ -37,11 +54,12 @@ export default [{
             //     path:'/superhotel_home.html',
             //     component:Server
             // },
-            // {
-            //     path:'/person.html',
-            //     component:Person,
-            //     isAuthorization:true
-            // },
+            {
+                path: '/index/person.html',
+                component: Person,
+                exact: true,
+                isAuthorization: true
+            },
         ]
     },
     {
@@ -56,19 +74,16 @@ export default [{
             //             path:'/meisu/select_location',
             //             component:Select_location
             //         },
-            //         {
-            //             path:'/meisu/search',
-            //             component:Search
-            //         },
-            //         {
-            //             path:'/meisu/getCoupon.html',
-            //             component:GetCoupon
-            //         },
-            //         {
-            //             path:'/meisu/stock_list.html',
-            //             component:Stock_list
-            //         },
-            //         {
+            {
+                path: '/meisu/search.html',
+                component: Search
+            },
+            {
+                path: '/meisu/getCoupon.html',
+                component: GetCoupon,
+                // isAuthorization: true
+            },
+             //         {
             //             path:'/meisu/super_list.html',
             //             component:Super_list
             //         },
@@ -76,10 +91,11 @@ export default [{
             //             path:'/meisu/cutprice.html',
             //             component:Cutprice
             //         },
-            //         {
-            //             path:'/meisu/theme.html',
-            //             component:Theme
-            //         },
+
+            {
+                path: '/meisu/theme.html',
+                component: Theme
+            },
             //         {
             //             path:'/meisu/lowprice.html',
             //             component:Lowprice
@@ -93,7 +109,7 @@ export default [{
             //             component:Mno_list.html
             //         },
             {
-                path:'/meisu/mno_detail.html',
+                path: '/meisu/mno_detail.html',
                 component: Mno_detail
             },
             {
@@ -107,6 +123,10 @@ export default [{
             {
                 path:'/meisu/orderlist.html',
                 component:Orderlist
+            },
+            {
+                path: '/meisu/stock_list.html',
+                component: Stock_list
             },
             //         {
             //             path:'/meisu/cutprice_orderlist.html',
@@ -171,5 +191,13 @@ export default [{
             //             component:Mno_order
             //         }
         ]
-    }
+    },
+    {
+        path: '/error',
+        component: Error,
+
+    },
 ]
+
+
+

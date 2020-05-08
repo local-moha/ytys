@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
-import Nav from "../components/Nav"
+import MyNav from "../components/MyNav"
 export default class Superhotel_home extends Component {
     constructor(props){
         super(props)
@@ -74,7 +74,7 @@ export default class Superhotel_home extends Component {
                     ))}
                     <input type="button" value={"加载更多"} ref={"btn"} onClick={this.hotelList.bind(this)}/>
                 </div>
-                <Nav></Nav>
+                <MyNav {...this.props}></MyNav>
             </div>
         )
     }
@@ -89,14 +89,14 @@ export default class Superhotel_home extends Component {
                 is_star:this.state.is_star,
             }
         })
-        console.log(data.data.list)
+        console.log(111,data)
         this.setState({
-            page:data.data.pager.page,
-            limit:data.data.pager.limit,
-            is_star:data.data.list.is_star,
+            page:data.pager.page,
+            limit:data.pager.limit,
+            is_star:data.list.is_star,
             list:[
                 ...this.state.list,
-                ...data.data.list
+                ...data.list
             ]
         })
     }
@@ -108,19 +108,19 @@ export default class Superhotel_home extends Component {
                 sort:this.state.sort
             }
         })
-        console.log(1111,data)
+        console.log(222,data)
         this.setState({
             // is_star:data.state.is_star,
             // sort:this.state.sort,
-            data:data.data,
+            data:data,
         })
     }
     //今日特价
     async specialOffer(){
         const {data}=await axios.get("/minsu/sale/index")
-        console.log(222,data.data.list)
+        console.log(333,data.list)
         this.setState({
-            list1:data.data.list
+            list1:data.list
         })
         
     }

@@ -256,11 +256,11 @@ export default class Superhotel_detail extends Component {
                 _:this.state._
             }
         })
-        console.log(1234,data.data.master)
+        console.log(111,data.master)
         this.setState({
-            det:data.data.master,
-            det1:data.data.master.image_public,
-            det2:data.data.master.image_out,
+            det:data.master,
+            det1:data.master.image_public,
+            det2:data.master.image_out,
         })
     }
     async roomList(){
@@ -272,11 +272,11 @@ export default class Superhotel_detail extends Component {
                 _:this.state._
             }
         })
-        console.log(data)
+        console.log(222,data)
         this.setState({
-            page:data.data.pager.page,
-            limit:data.data.pager.limit,
-            data:data.data.list
+            page:data.pager.page,
+            limit:data.pager.limit,
+            data:data.list
         })
     }
     async componentDidMount(){

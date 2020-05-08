@@ -1,0 +1,6 @@
+export default {
+    GET_COMMENT: "GET_COMMENT",
+    GET_ROOM_LIST: "GET_ROOM_LIST",
+    GET_MASTER: "GET_MASTER",
+    GET_RELATE: "GET_RELATE"
+}

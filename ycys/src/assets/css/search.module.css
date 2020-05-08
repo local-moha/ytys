@@ -1,0 +1,128 @@
+.page{
+    color: #222;
+    background: #f4f4f4;
+}
+.searchInput {
+    position: relative;
+    z-index: 2;
+    height: 88px;
+    margin: 32px 0 0 30px;
+    line-height: 88px;
+}
+.searchInput .input_w {
+    box-shadow: 0 0 16px 0 hsla(0,0%,76.5%,0.59);
+    background: #fff url("../img/search.png") no-repeat 20px/30px 30px;
+    padding-left: 64px;
+    border-radius: 44px;
+    width: 556px;
+}
+.searchInput .input_w .input {
+    height: 88px;
+    width: 100%;
+    font-size: 32px;
+    display: block;
+    border: none;
+    border-radius: 44px;
+}
+.searchInput .clear_btn {
+    right: 160px;
+    width: 100px;
+    height: 88px;
+    position: absolute;
+    top: 0;
+    background: url("../img/searchCls.png") no-repeat 40px/40px 40px;
+}
+.searchInput .cancel_btn {
+    font-size: 32px;
+    z-index: 2;
+    position: absolute;
+    right: 26px;
+    top: 0;
+    width: 114px;
+    text-align: center;
+    height: 100%;
+}
+.recommand {
+    margin-top: 40px;
+    color: #999;
+}
+.part_content {
+    padding: 0 14px 0 30px;
+    overflow: hidden;
+}
+.ovh {
+    overflow: hidden;
+}
+.history_word {
+    font-size: 24px;
+    float: left;
+    padding-left: 32px;
+    background: url("../img/searchHis.png") no-repeat 0/24px 24px;
+}
+.clear_history {
+    float: right;
+    font-size: 24px;
+    color: #666;
+    padding: 0 32px;
+}
+.search_list {
+    overflow: hidden;
+    margin-top: 20px;
+}
+.search_item {
+    float: left;
+    height: 68px;
+    line-height: 68px;
+    background: #fff;
+    -webkit-box-shadow: 0 0 2px 0 rgba(0,0,0,0.05);
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.05);
+    border-radius: 40px;
+    margin: 0 16px 16px 0;
+    padding: 0 40px;
+    color: #666;
+    text-align: center;
+    font-size: 26px;
+}
+
+.hot_word {
+    font-size: 24px;
+    color: #ffb241;
+    padding-left: 32px;
+    background: url("../img/searchHot.png") no-repeat 0/24px 24px;
+}
+.search_content{
+    height: 100%;
+    overflow: auto;
+    margin-top: -152px;
+    padding-top: 152px;
+    font-size: 28px;
+}
+
+.search_li{
+    overflow: hidden;
+    line-height: 98px;
+    margin: 0 34px 0 38px;
+    border-bottom: 1px solid #dbdbdb;
+}
+.search_word{
+    width: 288px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 98px;
+    float: left;
+    margin-right: 24px;
+}
+.search_address{
+    float: left;
+    font-size: 24px;
+    color: #999;
+    max-width: 160px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.search_price{
+    float: right;
+    color: #ff4f54;
+}

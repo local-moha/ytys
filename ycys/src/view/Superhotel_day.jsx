@@ -78,9 +78,9 @@ export default class Superhotel_day extends Component {
             }
         })
 
-        console.log(222,data.data.list)
+        console.log(222,data.list)
         this.setState({
-            list:data.data.list,
+            list:data.list,
         })
         
     }

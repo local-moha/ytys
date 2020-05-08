@@ -20,15 +20,15 @@ class Myrouter extends Component {
                             <Route key={v.path} exact={v.exact} path={v.path} render={()=><GuardRouter {...v}></GuardRouter>}></Route>
                         ))
                     }
-                    {/* <Redirect to={'/minsu/index.html'} from='/'></Redirect>
-                    <Redirect to={'/error'} from='*'></Redirect> */}
+                    <Redirect to={'/index/index.html'} from='/'></Redirect>
+                    <Redirect to={'/error'} from='*'></Redirect>
                 </Switch> 
            </Router> 
            
         );
     }
     componentWillMount(){
-        console.log(111,this.props);
+        console.log(this.props.router);
         
     }
 }
