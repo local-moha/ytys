@@ -1,0 +1,139 @@
+/* .page{
+    width: 100%;
+    height: 1000px;
+    background: #eee;
+} */
+.nav_bar{
+    position: relative;
+    width: 100%;
+    height: 88px;
+    line-height: 88px;
+    text-align: center;
+    background: #fff;
+    overflow: hidden;
+    -webkit-box-shadow: 1px 1px 1px #dcdada;
+    box-shadow: 1px 1px 1px #dcdada;
+    font-size: .16rem;
+    font-size: 32px;
+    color: #999;
+}
+.nav_left{
+    width: 357.2px;
+    height: 100%;
+    float: left;
+    color: red;
+}
+.nav_rigth{
+    width: 357.2px;
+    height: 100%;
+    float: left;
+}
+.status_w{
+    margin-top: 24px;
+    margin-bottom: -2400px;
+}
+.card{
+    background: #fff;
+    padding: 2px;
+    margin: 0 0 12px 0;
+    position: relative;
+    font-size: 27px;
+}
+.card_top{
+    /* padding: 0 40px; */
+    width: 670px;
+    height:72px;
+    line-height: 72px;
+    border-bottom: 2px solid hsla(0,0%,89.4%,.7);
+    margin: auto;
+}
+.card_status{
+    font-size: 30px;
+    float: left;
+    font-weight: 700;
+}
+.card_date{
+    margin-left: 400px;
+    color: #999;
+}
+.card_con{
+    width: 670px;
+    height: 200px;
+    /* background: red; */
+    margin: auto;
+    border-bottom: 2px solid hsla(0,0%,89.4%,.7);
+    overflow: hidden;
+}
+.card_con_left{
+    width: 256px;
+    height: 160px;
+    background: greenyellow;
+    margin-top: 20px;
+    margin-right: 30px;
+    border-radius: 5px;
+    float: left;
+}
+.card_con_rigth{
+    width: 256px;
+    height: 160px;
+    /* background: yellowgreen; */
+    margin-top: 20px;
+    float: left;
+    /* font-size: 27px; */
+}
+.room_name{
+    width: 256px;
+    height: 30px;
+    margin-bottom: 15px;
+}
+.room_title{
+    width: 256px;
+    height: 30px;
+    font-size: 25px;
+}
+.card_bottom{
+    width: 670px;
+    height: 90px;
+    line-height: 90px;
+    /* background: yellowgreen; */
+    margin: auto;
+    overflow: hidden;
+    font-size: 28px;
+}
+.card_price{
+    float: left;
+    color: #666;
+}
+._end{
+    width: 100%;
+    height: 600px;
+    margin-top: 2430px;
+    text-align: center;
+    color: #999;
+    font-size: 29px;
+}
+._end_icon{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin: 0 3px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAqklEQVQ4T+3TOw7DIAwAUGdA4bPABPc/HUxhIQQxtDIDalHS0JROrUdkPWMbJu/9DQbG9Ac/nmbXDNd1LYU456cFX4LbtsGyLJBSKtA8z6CUAkrpIbwLIoAQgnuBIMJYoI0nMOcM3nsIIZy2hglCCJBSAiGk5lcQb2Ot7YLaJK01MMbKcQVjjOCcuwQaY+pcv9fy49WGLaXtd9izaeFhD/vKhrq+3jvwD4J3hMiUQYiQv48AAAAASUVORK5CYII=) no-repeat 0 0/18px 18px;
+}
+.card_delete{
+    width: 124px;
+    height: 51px;
+    margin-left: 542px;
+    border-radius: 5px;
+    margin-top:15px;
+    border: 1px solid #c3c3c3;
+    line-height: 51px;
+    text-align: center;
+    font-size: 24px;
+}
+.Mydiv{
+    width: 120px;
+    margin: auto;
+    color: #ccc;
+    margin-top: 40px;
+    font-size: 28px;
+}

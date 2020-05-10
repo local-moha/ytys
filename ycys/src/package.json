@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "http-proxy-middleware": "^1.0.3"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}

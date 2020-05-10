@@ -1,0 +1,33 @@
+.page{
+    /* width: 400px;
+    height: 50px; */
+    background: red;
+}
+.nav_bar{
+    position: relative;
+    width: 100%;
+    height: 88px;
+    line-height: 88px;
+    text-align: center;
+    background: #fff;
+    overflow: hidden;
+    -webkit-box-shadow: 1px 1px 1px #dcdada;
+    box-shadow: 1px 1px 1px #dcdada;
+    font-size: .16rem;
+    font-size: 32px;
+    color: #999;
+}
+.nav_left{
+    width: 357.2px;
+    height: 100%;
+    float: left;
+    color: red;
+}
+.nav_rigth{
+    width: 357.2px;
+    height: 100%;
+    float: left;
+}
+.active{
+    color: red;
+}
